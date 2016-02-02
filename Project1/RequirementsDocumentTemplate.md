@@ -18,15 +18,13 @@ The purpose of this project is to create an application for Lauren and her stude
  
 ###1.1 Software Interfaces
 
-List all the external systems with which the software product interacts. These are external systems/libraries that you have to interact with.
+The program will use standard Java libraries only. It will be platform independent. 
 
 ###1.2 User Interfaces
 
-Specify the logical characteristics of each interface between the software product and its users. This is a description of how the system will interact with its users.
+The user will interact with the product via a terminal command line interface. They will be able to specify the file they wish to input and some additional flag options to change the way the program will process the text file. The program will provide "user-friendly" readable errors to guide the user onto correct program usage and formatting.
 
 ###1.3 User Characteristics
-
-Describe those general characteristics of the intended users of the product, including educational level, experience, and technical expertise.
 
 Users are students and Lauren, the Professor.  They are expected to function at college level. The users have varying degrees of technical proficiency, ranging from no experience to very technically proficient.
 
