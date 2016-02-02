@@ -2,33 +2,42 @@
 
 ## 1 Introduction
 
-The purpose for the Average Sentence Length project is to create an application for Lauren and her students to help imporve their writing skills.The application will calculate the average number of words per sentence within an essay.  The students will have the opportunity to make adjustments to their essay and run the application again until they are satisfied with the results of their sentence lengths.
+The purpose of the Average Sentence Length project is to create an application for Lauren and her students to help imporve their writing skills. The application will calculate the average number of words per sentence within an essay.  The students will have the opportunity to make adjustments to their essay and run the application again until they are satisfied with the results of their sentence lengths.
 
 ## 2 Process Description
 
 ### Analyze Requirements:
 
--Desc: Capture all possible requirements for the system to be developed in a requirement specification document.
+###### Description
+Capture all possible requirements for the system to be developed in a requirement specification document.
 
--Entrance Criteria: Customer input via interview will be used for this process.
+###### Entrance Criteria
+Customer input from the initial interview will be used for this process.
 
--Exit Critera: Full set of requirements mapped out with a requirements document completed.
+###### Exit Critera
+Full set of requirements mapped out with a requirements document completed.
 
 ### Design System:
 
--Desc: The requirement specifications from first phase are studied in this phase and system design is prepared. System Design helps in specifying hardware and system requirements and also helps in defining overall system architecture.
+###### Description 
+The requirement specifications from first phase are studied in this phase and system design is prepared. System Design helps in specifying hardware and system requirements and also helps in defining overall system architecture.
 
--Entrance Criteria: Finished requirements document and project plan will allow the development lead to determine structure   and layout of the program.
+###### Entrance Criteria
+Finished requirements document and project plan will allow the development lead to determine structure   and layout of the program.
 
--Exit Criteria: A written description of the planned system design.
+###### Exit Criteria
+A written description of the planned system design.
 
-### Implementation:
+### Implement code
 
--Desc: The majority of coding is done in this phase. Small units of code will be constructed and then tested.  
+###### Description
+The majority of coding is done in this phase. Small units of code will be constructed and then tested.  
 
--Entrance Criteria: The design documents are finalized.  
+###### Entrance Criteria: 
+The design documents are finalized.  
 
--Exit Criteria: All units of code are written and testing is complete.  
+###### Exit Criteria 
+All units of code are written and testing is complete.  
 
 ### Integration:
 
@@ -62,15 +71,15 @@ Ben Pearce, bpearce9, gatech@bcpearce.com
 Carol Stone, cstone41, carolstonegt@gmail.com  
 Daniel Dersch, ddersch3, dhdersch@gatech.com  
 Blaine Spear, bspear8, blaine.spear@gmail.com  
-	
-###*Roles:*
+    
+### *Roles:*
 
 Team Manager - Administrates and coordinates team to build a finished product, and also submits the finished product.  
 Development Lead - Oversees development process and makes final decisions on any design conflicts.  
 Documentation Lead - Chooses and implements format of all usage, specification, and design documentation.  
 QA Manager - Prevents mistakes and defects by deciding on project error handling and testing processes.  
 
-###*Assigned Roles:*
+### *Assigned Roles:*
 
 Project Manager: Blaine Spear  
 Development Lead: Daniel Dersch  
