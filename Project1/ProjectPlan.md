@@ -39,29 +39,44 @@ The design documents are finalized.
 ###### Exit Criteria 
 All units of code are written and testing is complete.  
 
-### Integration:
+### Integrate:
 
--Desc: The units of code are integrated into a single product and then the product as a whole is tested.  
+###### Description 
+The units of code are integrated into a single product and then the product as a whole is tested.  
 
--Entrance Critera: All units of code are written and testing is complete.  
+###### Entrance Critera
+All units of code are written and testing is complete.  
 
--Exit Criteria: The product is integrated and is fully functional with no known errors.  
+###### Exit Criteria
+The product is integrated and is fully functional with no known errors.  
 
-### Deployment:
+### Deploy Code:
 
--Desc: The product is released to the customer. In this case, the product github commit code is submitted to tsquare by the project manager.  
+###### Desc:
 
--Entrance Critera: The product is integrated and is fully functional with no known errors.  
+The product is released to the customer. In this case, the product github commit code is submitted to tsquare by the project manager.  
 
--Exit Criteria: Successful project submission.  
+###### Entrance Critera
+
+The product is integrated and is fully functional with no known errors.  
+
+###### Exit Criteria 
+
+Successful project submission.  
 
 ### Maintenance:
 
--Desc: This process phase is purely notional for the purposes of this project. Post release the team would normally support the code for a specified length of time, fixing any newly discovered errors or modifying the project to meet new             customer needs.  
+###### Description
 
--Entrance Criteria: This phase begins immediately following product release.  
+This process phase is purely notional for the purposes of this project. Post release the team would normally support the code for a specified length of time, fixing any newly discovered errors or modifying the project to meet new             customer needs.  
 
--Exit Criteria: After pre-agreed upon period of time has expired or the product is no longer used by the customer.  
+###### Entrance Criteria
+
+This phase begins immediately following product release.  
+
+###### Exit Criteria
+
+After pre-agreed upon period of time has expired or the product is no longer used by the customer.  
 
 ## 3 Team
 
