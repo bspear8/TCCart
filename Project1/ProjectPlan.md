@@ -74,9 +74,11 @@ Documentation Lead - Chooses and implements format of all usage, specification, 
 QA Manager - Prevents mistakes and defects by deciding on project error handling and testing processes.
 
 *Assigned Roles:*
-| Project Manager        | Development Lead           | Documentation Lead  | QA Manager |
-| --- | --- | --- | --- |
-| Blaine Spear | Daniel Dersch | Carol Stone | Ben Pearce |
+
+Project Manager: Blaine Spear
+Development Lead: Daniel Dersch
+Documentation Lead: Carol Stone
+QA Manager: Ben Pearce
 
 
 ##4 Estimates
