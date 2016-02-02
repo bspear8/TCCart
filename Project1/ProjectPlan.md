@@ -1,20 +1,20 @@
 # **Project Plan -- Team 38**
 
-##1 Introduction
+## 1 Introduction
 
-The purpose of this project is to create an application for Lauren and her students which will help perfect the students' writing skills.  Currently, students often write essays utilizing long, wordy sentences.  The application will count the number of words per sentence within an essay.  The students will have the opportunity to make adjustments to their essay and run the application again until they are satisfied with the results of their sentence lengths.
+The purpose for the Average Sentence Length project is to create an application for Lauren and her students to help imporve their writing skills.The application will calculate the average number of words per sentence within an essay.  The students will have the opportunity to make adjustments to their essay and run the application again until they are satisfied with the results of their sentence lengths.
 
-##2 Process Description
+## 2 Process Description
 
-###Requirements Anaylsis:
+### Analyze Requirements:
 
--Desc: All possible requirements of the system to be developed are captured in this phase and documented in a requirement specification document.
+-Desc: Capture all possible requirements for the system to be developed in a requirement specification document.
 
 -Entrance Criteria: Customer input via interview will be used for this process.
 
 -Exit Critera: Full set of requirements mapped out with a requirements document completed.
 
-###System Design:
+### Design System:
 
 -Desc: The requirement specifications from first phase are studied in this phase and system design is prepared. System Design helps in specifying hardware and system requirements and also helps in defining overall system architecture.
 
@@ -22,7 +22,7 @@ The purpose of this project is to create an application for Lauren and her stude
 
 -Exit Criteria: A written description of the planned system design.
 
-###Implementation:
+### Implementation:
 
 -Desc: The majority of coding is done in this phase. Small units of code will be constructed and then tested.  
 
@@ -30,7 +30,7 @@ The purpose of this project is to create an application for Lauren and her stude
 
 -Exit Criteria: All units of code are written and testing is complete.  
 
-###Integration:
+### Integration:
 
 -Desc: The units of code are integrated into a single product and then the product as a whole is tested.  
 
@@ -38,7 +38,7 @@ The purpose of this project is to create an application for Lauren and her stude
 
 -Exit Criteria: The product is integrated and is fully functional with no known errors.  
 
-###Deployment:
+### Deployment:
 
 -Desc: The product is released to the customer. In this case, the product github commit code is submitted to tsquare by the project manager.  
 
@@ -46,7 +46,7 @@ The purpose of this project is to create an application for Lauren and her stude
 
 -Exit Criteria: Successful project submission.  
 
-###Maintenance:
+### Maintenance:
 
 -Desc: This process phase is purely notional for the purposes of this project. Post release the team would normally support the code for a specified length of time, fixing any newly discovered errors or modifying the project to meet new             customer needs.  
 
@@ -54,7 +54,7 @@ The purpose of this project is to create an application for Lauren and her stude
 
 -Exit Criteria: After pre-agreed upon period of time has expired or the product is no longer used by the customer.  
 
-##3 Team
+## 3 Team
 
 ###*Team Members:*
 
@@ -78,7 +78,7 @@ Documentation Lead: Carol Stone
 QA Manager: Ben Pearce  
 
 
-##4 Estimates
+## 4 Estimates
 
 - Effort hours: 10 hours per week per team member.
 - Lines of code: ~4000
