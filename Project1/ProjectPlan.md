@@ -57,18 +57,21 @@ Maintenance:
 ##3 Team
 
 *Team Members:*
+
 Ben Pearce, bpearce9, gatech@bcpearce.com
 Carol Stone, cstone41, carolstonegt@gmail.com
 Daniel Dersch, ddersch3, dhdersch@gatech.com
 Blaine Spear, bspear8, blaine.spear@gmail.com
 	
 *Roles:*
+
 Team Manager - Administrates and coordinates team to build a finished product, and also submits the finished product.
 Development Lead - Oversees development process and makes final decisions on any design conflicts.
 Documentation Lead - Chooses and implements format of all usage, specification, and design documentation.
 QA Manager - Prevents mistakes and defects by deciding on project error handling and testing processes.
 
 *Assigned Roles:*
+
 Project Manager - Blaine Spear
 Development Lead - Daniel Dersch
 Documentation Lead - Carol Stone
