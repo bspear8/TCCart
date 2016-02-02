@@ -75,8 +75,8 @@ QA Manager - Prevents mistakes and defects by deciding on project error handling
 
 *Assigned Roles:*
 | Project Manager        | Development Lead           | Documentation Lead  | QA Manager |
-|:----------------------:|:--------------------------:|:-------------------:|:----------:|
-| Blaine Spear     | Daniel Dersch | Carol Stone | Ben Pearce |
+| --- | --- | --- | --- |
+| Blaine Spear | Daniel Dersch | Carol Stone | Ben Pearce |
 
 
 ##4 Estimates
