@@ -59,8 +59,11 @@ Maintenance:
 *Team Members:*
 
 Ben Pearce, bpearce9, gatech@bcpearce.com
+
 Carol Stone, cstone41, carolstonegt@gmail.com
+
 Daniel Dersch, ddersch3, dhdersch@gatech.com
+
 Blaine Spear, bspear8, blaine.spear@gmail.com
 	
 *Roles:*
@@ -71,11 +74,10 @@ Documentation Lead - Chooses and implements format of all usage, specification, 
 QA Manager - Prevents mistakes and defects by deciding on project error handling and testing processes.
 
 *Assigned Roles:*
+| Project Manager        | Development Lead           | Documentation Lead  | QA Manager |
+|:----------------------:|:--------------------------:|:-------------------:|:----------:|
+| Blaine Spear     | Daniel Dersch | Carol Stone | Ben Pearce |
 
-Project Manager - Blaine Spear
-Development Lead - Daniel Dersch
-Documentation Lead - Carol Stone
-QA Manager - Ben Pearce
 
 ##4 Estimates
 
