@@ -4,34 +4,70 @@ The purpose of this project is to create an application for Lauren and her stude
 
 ##1 User Requirements
 
-	1. The program should be an application.
-	2. The users should  be able to execute the application from the command line.
-	3. The user should be able to provide a file path to the file they wish to be analyzed as a command line argument.
-	4. Multiple computer OS systems will need to be supported.
-	5. File types to be analyzed are raw text files.
-	6. User should be able to specify which delimiters count as sentence separators. Their choices should be from those identified as acceptable by Lauren
-	7. The user should be able to specify a lower limit for word length, defaulting to Lauren's guess at what value might be good.
-	8. The program should only count words greater than 3 characters
-	9. The program's output should provide the user with the average sentence length, rounded down to the nearest integer.
-	10. Error conditions should display friendly messages to the user to help assist them in correcting any identified issues.
-	11. The application must be very user friendly and able to be run by those with technical skills ranging from none to highly technical.
- 
+1.0.1  Users
+	1.0.1.1 Users must be students and Professor Lauren
+	1.0.1.2 Users will have varying technical skills, ranging from minimal to highly technical
+
+1.0.2  Solution Type
+	1.0.2.1 The solution must be a Java program.
+	1.0.2.2 It must be executable from the command line with javac
+	1.0.2.3 The application must be able to be run on multiple OSes
+			1.3.3.1  Windows 
+			1.3.3.2  Mac 
+
+1.0.3 Files for Analyzing
+	1.0.3.1 The user should be able to provide a file path to the file they wish to be analyzed as a command line argument.
+	1.0.3.2 Files to be analyzed will be raw text files
+
+1.0.4 Analyzing Options
+	1.0.4.1 Users should be able to specify which delimiters count as sentence separators. Their choices should be from 			those identified as acceptable by Lauren.	
+	1.0.4.2 The user should be able to specify a minimum word length, defaulting to 3 characters
+
+1.0.5 Output - Results
+
+	1.0.5.1 The program's output should provide the user with the average sentence length, rounded down to the nearest 	 	    integer
+	1.0.5.2 The program should be able to run repeatably after the student changes their document, displaying new 				results.
+
+1.0.6 Error Conditions
+	1.0.6.1 Error conditions should display friendly messages to the user to help assist them in correcting any identified issues.
+
 ###1.1 Software Interfaces
 
-The program will use standard Java libraries only. It will be platform independent. 
+1.1.1 The program will use standard Java libraries only. 
+
+1.1.2 JRE 1.7u80
+
+1.1.3 The program will work on any Windows, Linux and OS X
+
+1.1.4 The user's computer runs everything locally and receives no data from a server, etc.
 
 ###1.2 User Interfaces
 
 The user will interact with the product via a terminal command line interface. They will be able to specify the file they wish to input and some additional flag options to change the way the program will process the text file. The program will provide "user-friendly" readable errors to guide the user onto correct program usage and formatting.
 
-###1.3 User Characteristics
+1.2.1  The user interface must be executed from a command line by typing <path>/javac <appname><filename><flags>
+1.2.2  There will be user friendly error messages guiding them to correct program usuage
 
-Users are students and Lauren, the Professor.  They are expected to function at college level. The users have varying degrees of technical proficiency, ranging from no experience to very technically proficient.
+###1.3 User Characteristics
+Describe those general characteristics of the intended users of the product, including educational level, experience, and technical expertise.
+
+1.3.1 Intended users
+	1.3.1.1 Users are University students and Lauren, the Professor.
+1.3.2 Educational Level
+	1.3.2.1 College level
+	1.3.2.2 College Professor
+1.3.3 Experience
+	1.3.3.1 No prior experience required
+1.3.4 Technical expertise
+	1.3.4.1 Varying degrees of technical proficiency
+		1.3.4.1.1 Ranging from no experience to highly proficient.
 
 ##2 System Requirements
 
 These subsections contain all the software requirements at a level of detail sufficient to enable designers/developers to design/develop a system that satisfies those requirements, and testers to test that the system satisfies those requirements. This part of the document should provide a numbered (possibly hierarchical) list of simple, complete, and consistent functional and non-functional requirements. 
- 
+
+????
+
 ###2.1 Functional Requirements
 
 	1. The program should have a main method and should be executable from the command line using the javac command without additional options/switches.
