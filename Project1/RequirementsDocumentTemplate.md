@@ -59,6 +59,8 @@ The user will interact with the product via a terminal command line interface. T
 	
 2.2.2. All code required to execute the program that is not part of the standard JDK, will be included as source code with the program.
 	
-2.2.3. The testing platform shall be restricted to only the Java Runtime Environment and standard libraries. 
+2.2.3. The testing platform shall be restricted to only the Java Runtime Environment and standard libraries.
+
+2.2.4. The application shall perform all operations (including calculations and output) on a 10 kilobyte file in under 4000 milliseconds. 
 
 
