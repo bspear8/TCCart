@@ -56,6 +56,14 @@ The user will interact with the product via a terminal command line interface. T
 ###2.2 Non-Functional Requirements
 
 2.2.1. Error conditions will display friendly messages to the user to help assist them in correcting any identified issues.
+
+2.2.1.1 Notify user if no file is specified.
+
+2.2.1.2 Notify user if specified file does not exist.
+
+2.2.1.3 Notify user if specified file is not readable.
+
+2.2.1.4 Notify user if the specified minimum word length (see 2.1.6) is not valid. (Only positive integers are valid).
 	
 2.2.2. All code required to execute the program that is not part of the standard JDK, will be included as source code with the program.
 	
