@@ -2,7 +2,7 @@
 
 ## 1 Introduction
 
-The purpose of the Average Sentence Length project is to create an application for Lauren and her students to help improve their writing skills. The application will calculate the average number of words per sentence within an essay.  The students will have the opportunity to make adjustments to their essay and run the application again until they are satisfied with the results of their sentence lengths.
+The purpose of the Average Sentence Length project is to create an application for Lauren and her students to help improve their writing skills. The application will calculate the average number of words per sentence within an essay.  The students will have the opportunity to make adjustments to their essay and run the application again until they are satisfied with the results of their sentence lengths. We will use the Waterfall methodology to develop this application.
 
 ## 2 Process Description
 
@@ -64,11 +64,11 @@ The product is integrated and is fully functional with no known errors.
 
 Successful project submission.  
 
-### Maintain sofware:
+### Maintain Software
 
 ###### Description
 
-This process phase is purely notional for the purposes of this project. Post release the team would normally support the code for a specified length of time, fixing any newly discovered errors or modifying the project to meet new             customer needs.  
+This process phase is purely notional for the purposes of this project. Post release the team would normally support the code for a specified length of time, fixing any newly discovered errors or modifying the project to meet new customer needs.  
 
 ###### Entrance Criteria
 
