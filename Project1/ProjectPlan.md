@@ -2,28 +2,28 @@
 
 ## 1 Introduction
 
-The purpose of the Average Sentence Length project is to create an application for Lauren and her students to help imporve their writing skills. The application will calculate the average number of words per sentence within an essay.  The students will have the opportunity to make adjustments to their essay and run the application again until they are satisfied with the results of their sentence lengths.
+The purpose of the Average Sentence Length project is to create an application for Lauren and her students to help improve their writing skills. The application will calculate the average number of words per sentence within an essay.  The students will have the opportunity to make adjustments to their essay and run the application again until they are satisfied with the results of their sentence lengths.
 
 ## 2 Process Description
 
 ### Analyze Requirements:
 
 ###### Description
-Capture all possible requirements for the system to be developed in a requirement specification document.
+Capture all possible requirements for the Average Sentence Length project in a requirements specification document.
 
 ###### Entrance Criteria
-Customer input from the initial interview will be used for this process.
+Customer input from the initial interview will be considered. Additionally, we will ask the customer questions during the asynchronous office hours, and the answers to these questsions will be considered.
 
 ###### Exit Critera
-Full set of requirements mapped out with a requirements document completed.
+Full set of requirements mapped out in a complete requirements specification document.
 
 ### Design System:
 
 ###### Description 
-The requirement specifications from first phase are studied in this phase and system design is prepared. System Design helps in specifying hardware and system requirements and also helps in defining overall system architecture.
+The requirement specifications are studied in this phase and a system design is prepared. System Design helps in specifying hardware and software requirements and also helps in defining overall system architecture.
 
 ###### Entrance Criteria
-Finished requirements document and project plan will allow the development lead to determine structure   and layout of the program.
+Finished requirements document and project plan will allow the development lead to determine structure and layout of the program.
 
 ###### Exit Criteria
 A written description of the planned system design.
@@ -31,7 +31,7 @@ A written description of the planned system design.
 ### Implement code
 
 ###### Description
-The majority of coding is done in this phase. Small units of code will be constructed and then tested.  
+The code is written during this phase. Small units of code will be constructed and then tested.  
 
 ###### Entrance Criteria: 
 The design documents are finalized.  
@@ -39,7 +39,7 @@ The design documents are finalized.
 ###### Exit Criteria 
 All units of code are written and testing is complete.  
 
-### Integrate:
+### Integrate
 
 ###### Description 
 The units of code are integrated into a single product and then the product as a whole is tested.  
@@ -50,9 +50,9 @@ All units of code are written and testing is complete.
 ###### Exit Criteria
 The product is integrated and is fully functional with no known errors.  
 
-### Deploy Code:
+### Deploy Code
 
-###### Desc:
+###### Description
 
 The product is released to the customer. In this case, the product github commit code is submitted to tsquare by the project manager.  
 
@@ -64,7 +64,7 @@ The product is integrated and is fully functional with no known errors.
 
 Successful project submission.  
 
-### Maintenance:
+### Maintain sofware:
 
 ###### Description
 
