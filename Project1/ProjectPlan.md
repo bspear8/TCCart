@@ -39,13 +39,13 @@ The design documents are finalized.
 ###### Exit Criteria 
 All units of code are written and testing is complete.  
 
-### Integrate
+### Test System
 
 ###### Description 
 The units of code are integrated into a single product and then the product as a whole is tested.  
 
 ###### Entrance Critera
-All units of code are written and testing is complete.  
+All units of code are written and unit tests are complete.  
 
 ###### Exit Criteria
 The product is integrated and is fully functional with no known errors.  
