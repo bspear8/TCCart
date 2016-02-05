@@ -3,3 +3,4 @@ How are we going to handle contractions?
 How are we going to handle parans, slashes, hyphens?
 What libraries are we restricted from using?
 Lauren mentions only counting sentences that aren't grammatically correct and are too long. Could the customer elaborate on this? Did she mean grammatically correct or too long?
+Should delimiters consisting of multiple characters be allowed? For example, ",and" might be useful as a delimitter to help idenitify a compound sentence.
