@@ -22,12 +22,14 @@ public class CommandLineArguments {
 		this.processArgs();
 	}
 	
-	public CommandLineArguments(String[] args) {
-		this._rawArgs = args;
-		this.processArgs();
+	private void validate() throws FilePathNotProvidedException {
+		if (this._filePath == null || this._filePath.equals("")) {
+			throw new FilePathNotProvidedException("Please specify a file to process");
+		}
+		
 	}
 	
-	private void processArgs() {
+	private void processArgs() throws FilePathNotProvidedException {
 		Boolean foundPath = false;
 		Boolean foundMinWordLengthFlag = false;
 		Boolean foundDelimittersFlag = false;
@@ -38,14 +40,14 @@ public class CommandLineArguments {
 		for (int index = 0; index < this._rawArgs.length; index++) {
 			String arg = this._rawArgs[index];
 			
-			if (arg == "-d" && !foundDelimittersFlag) {
+			if (arg.equals("-d") && !foundDelimittersFlag) {
 				foundDelimittersFlag = true;
 				index++;
 				if (index < this._rawArgs.length) {
 					delimiters = this._rawArgs[index];
 					continue;
 				}
-			} else if (arg == "-l" && !foundMinWordLengthFlag) {
+			} else if (arg.equals("-l") && !foundMinWordLengthFlag) {
 				foundMinWordLengthFlag = true;
 				index++;
 				if (index < this._rawArgs.length) {
@@ -61,6 +63,8 @@ public class CommandLineArguments {
 		this._delimiters = delimiters.toCharArray();
 		this._minimumWordLength = minWordLength;
 		this._filePath = filePath;
+		
+		this.validate();
 		
 	}
 

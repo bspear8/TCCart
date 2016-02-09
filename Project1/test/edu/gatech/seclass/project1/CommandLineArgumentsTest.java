@@ -79,10 +79,19 @@ public class CommandLineArgumentsTest {
 	 */
 	@Test
 	public void testCommandLineArguments_WithAllFlags_WithPathFirst() {
-		String[] args = {this.SomeDirectoryPath, "-l", "9", "-d", "abcdef", };
+		String[] args = {this.SomeDirectoryPath, "-l", "9", "-d", "abcdef" };
 		myargs.setArgs(args);
 		assertEquals(this.SomeDirectoryPath, myargs.getFilePath());
 		assertEquals(9, myargs.getMinWordLength());
 		assertArrayEquals("abcdef".toCharArray(), myargs.getDelimiters());
 	}
+	
+	/**
+	 * Tests functionality when the File Path is not provided
+	 */
+	@Test(expected = FilePathNotProvidedException.class)
+	public void testCommandLineArguments_NoFilePathProvided() {
+		String[] args = {"-l", "9", "-d", "abcdef" };
+		myargs.setArgs(args);
+	}	
 }
