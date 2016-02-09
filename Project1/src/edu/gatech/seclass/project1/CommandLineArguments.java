@@ -1,11 +1,10 @@
 package edu.gatech.seclass.project1;
 
 
-
 public class CommandLineArguments {
 	
-    private final String DEFAULT_DELIMITTERS = ".:;!?"; 
-    private final int DEFAULT_MIN_WORD_LENGTH = 4;
+    public static final String DEFAULT_DELIMITTERS = ".:;!?"; 
+    public static final int DEFAULT_MIN_WORD_LENGTH = 4;
 	
 	private String[] _rawArgs;
 	
@@ -15,16 +14,25 @@ public class CommandLineArguments {
 	
 	private int _minimumWordLength;
 	
+	public CommandLineArguments() {
+	}
+	
+	public void setArgs(String[] args) {
+		this._rawArgs = args;
+		this.processArgs();
+	}
+	
 	public CommandLineArguments(String[] args) {
 		this._rawArgs = args;
+		this.processArgs();
 	}
 	
 	private void processArgs() {
 		Boolean foundPath = false;
 		Boolean foundMinWordLengthFlag = false;
 		Boolean foundDelimittersFlag = false;
-		String delimiters = this.DEFAULT_DELIMITTERS;
-		int minWordLength = this.DEFAULT_MIN_WORD_LENGTH;
+		String delimiters = CommandLineArguments.DEFAULT_DELIMITTERS;
+		int minWordLength = CommandLineArguments.DEFAULT_MIN_WORD_LENGTH;
 		String filePath = null;
 		
 		for (int index = 0; index < this._rawArgs.length; index++) {
@@ -37,17 +45,13 @@ public class CommandLineArguments {
 					delimiters = this._rawArgs[index];
 					continue;
 				}
-			}
-			
-			if (arg == "-l" && !foundMinWordLengthFlag) {
+			} else if (arg == "-l" && !foundMinWordLengthFlag) {
 				foundMinWordLengthFlag = true;
 				index++;
 				if (index < this._rawArgs.length) {
 					minWordLength = Integer.parseInt(this._rawArgs[index]);
 				}
-			}
-			
-			if (!foundPath) {
+			} else if (!foundPath) {
 				foundPath = true;
 				filePath = this._rawArgs[index];
 			}
