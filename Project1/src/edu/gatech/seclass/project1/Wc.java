@@ -4,6 +4,8 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.Reader;
 import java.io.UnsupportedEncodingException;
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 
 public class Wc {
 	
@@ -32,7 +34,8 @@ public class Wc {
 		
 		r.close();
 		
-		System.out.println(result);
+		BigDecimal bd = new BigDecimal(result);
+		System.out.println(bd.setScale(2, RoundingMode.HALF_UP).toPlainString());
 
 	}
 	
