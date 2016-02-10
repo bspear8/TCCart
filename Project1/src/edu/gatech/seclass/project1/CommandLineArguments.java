@@ -27,6 +27,10 @@ public class CommandLineArguments {
 			throw new FilePathNotProvidedException("Please specify a file to process");
 		}
 		
+		if (this._minimumWordLength <= 0) {
+			throw new InvalidMinimumLengthException("Bad ", Integer.toString(this._minimumWordLength));
+		}
+		
 	}
 	
 	private void processArgs() throws FilePathNotProvidedException {

@@ -13,7 +13,16 @@ public class Wc {
 	FileNotFoundException, IOException {
 		
 		CommandLineArguments arguments = new CommandLineArguments();
-		arguments.setArgs(args);
+		
+		try {
+			arguments.setArgs(args);
+		} catch(FilePathNotProvidedException e) {
+			System.err.println("ERROR: A file path was not specified as a command-line argument.");
+			System.exit(1);
+		} catch(InvalidMinimumLengthException e) {
+			System.err.printf("ERROR: An invalid minimum word length (the -l flag) was provided '%s'", e.getBadValue());
+			System.exit(1);
+		}
 		
 		Reader r = Core.LoadFileStream(arguments.getFilePath());
 		
