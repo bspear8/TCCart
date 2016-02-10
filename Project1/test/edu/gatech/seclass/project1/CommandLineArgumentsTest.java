@@ -94,4 +94,13 @@ public class CommandLineArgumentsTest {
 		String[] args = {"-l", "9", "-d", "abcdef" };
 		myargs.setArgs(args);
 	}	
+	
+	/**
+	 * Tests functionality when the File Path is valid, but the length is an invalid number (0)
+	 */
+	@Test(expected = InvalidMinimumLengthException.class)
+	public void testCommandLineArguments_BadMinLength() {
+		String[] args = {"-l", "0", this.SomeDirectoryPath};
+		myargs.setArgs(args);
+	}
 }
