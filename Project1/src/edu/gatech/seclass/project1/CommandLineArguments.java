@@ -55,7 +55,11 @@ public class CommandLineArguments {
 				foundMinWordLengthFlag = true;
 				index++;
 				if (index < this._rawArgs.length) {
-					minWordLength = Integer.parseInt(this._rawArgs[index]);
+					try {
+						minWordLength = Integer.parseInt(this._rawArgs[index]);
+					} catch (NumberFormatException e) {
+						throw new InvalidMinimumLengthException("Bad length", this._rawArgs[index]);
+					}
 				}
 			} else if (!foundPath) {
 				foundPath = true;
