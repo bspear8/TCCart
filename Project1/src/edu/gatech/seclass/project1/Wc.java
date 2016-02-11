@@ -26,13 +26,13 @@ public class Wc {
 			System.exit(1);
 		}
 		
-		Reader r = Core.LoadFileStream(arguments.getFilePath());
+		//Reader r = Core.LoadFileStream(arguments.getFilePath());
 		
 		Core c = new Core(arguments.getDelimiters(), arguments.getMinWordLength());
+		c.LoadFileStream(arguments.getFilePath());
+		double result = c.Calculate();
 		
-		double result = c.Calculate(r);
-		
-		r.close();
+		//r.close();
 		
 		BigDecimal bd = new BigDecimal(result);
 		System.out.println(bd.setScale(2, RoundingMode.HALF_UP).toPlainString());

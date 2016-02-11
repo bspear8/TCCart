@@ -14,6 +14,7 @@ public class Core {
 	
 	private int _minWordLength;
 	private HashSet<Character> _delimiters;
+	private InputStreamReader _r;
 	
 	
 	public Core(char[] delimiters, int minWordLength) {
@@ -30,14 +31,14 @@ public class Core {
 		return this._delimiters.contains(new Character(c));
 	}
 	
-	public double Calculate(Reader r) throws IOException {
+	public double Calculate() throws IOException {
 		
 		ArrayList<Double> sentenceLengths = new ArrayList<Double>();
 		
 		int i;
 		int currentNumWords = 0;
 		int currentWordLength = 0;
-		for (i = r.read(); i != -1; i = r.read()) {
+		for (i = this._r.read(); i != -1; i = this._r.read()) {
 			
 			char ch = (char) i;
 			
@@ -77,12 +78,9 @@ public class Core {
 		return total / ((double)lengths.size());
 	}
 	
-	public static Reader LoadFileStream(String filePath) throws UnsupportedEncodingException, FileNotFoundException {
+	public void LoadFileStream(String filePath) throws UnsupportedEncodingException, FileNotFoundException {
 		FileInputStream in = new FileInputStream(filePath);
-		InputStreamReader r = new InputStreamReader(in, "US-ASCII");
-		
-		return r;
-
+		this._r = new InputStreamReader(in, "US-ASCII");
 	}
 
 }
