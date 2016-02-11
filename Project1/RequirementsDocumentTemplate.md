@@ -74,26 +74,40 @@ The user will interact with the product via a terminal command line interface. T
 2.2.4  The program should be able to process 5000 characters per second on average.
 
 2.2.5  A word will be defined as being greater than 3 characters.  The lower limit is 4 characters inclusive.
-	2.2.5.1  Numbers greater than 3 characters will be considered a word
-	2.2.5.2  "Mr." and "Mrs." do not require special handling
-	2.2.5.3  Only ASCII characters will be counted for this project.  No Unicode considerations necessary.
-	2.2.5.4  Contractions and hyphens will be considered as normal words and character.  No special handling is required
-	2.2.5.5  Line breaks do not count as sentence delimiters
-	2.2.5.6  A sentence can span multiple lines
-	2.2.5.7 Bulleted lists are nothing special.
-	2.2.5.8  A sentence that is length 0 should NOT be considered.  They should not lower the average.
-	2.2.5.9  Capitalization does not matter.
+
+2.2.5.1  Numbers greater than 3 characters will be considered a word
+	
+2.2.5.2  "Mr." and "Mrs." do not require special handling
+	
+2.2.5.3  Only ASCII characters will be counted for this project.  No Unicode considerations necessary.
+	
+2.2.5.4  Contractions and hyphens will be considered as normal words and character.  No special handling is required
+	
+2.2.5.5  Line breaks do not count as sentence delimiters
+	
+2.2.5.6  A sentence can span multiple lines
+	
+2.2.5.7 Bulleted lists are nothing special.
+	
+2.2.5.8  A sentence that is length 0 should NOT be considered.  They should not lower the average.
+	
+2.2.5.9  Capitalization does not matter.
 
 2.2.6  The program will only read one file at a time.
 
 2.2.7  If a command flag is missing, an error message will be thrown
 
 2.2.8  Delimiters are specified as typical:
-	2.2.8.1  -d <sequence_of_chars>
-	2.2.8.2 delimiters may appear in any order
-	2.2.8.3 delimiters are operating system dependent
-	2.2.8.4  delimiters replace defaults
-	2.2.8.5  Single characters as delimiters only
+
+2.2.8.1  -d <sequence_of_chars>
+	
+2.2.8.2 delimiters may appear in any order
+	
+2.2.8.3 delimiters are operating system dependent
+	
+2.2.8.4  delimiters replace defaults
+	
+2.2.8.5  Single characters as delimiters only
 
 2.29  The program will NOT be compiled as a JAR
 
@@ -112,9 +126,12 @@ The user will interact with the product via a terminal command line interface. T
 2.3.6  All error messages will start with "ERROR: <message>
 
 2.3.7  A word will be defined as consecutive ASCII characters followed by a:
-	2.3.7.1 Tab
-	2.3.7.2 Newline
-	2.3.7.3 Space
+
+2.3.7.1 Tab
+	
+2.3.7.2 Newline
+	
+2.3.7.3 Space
 
 2.3.8 Both /r and /r/n are considered whitespace
 
