@@ -161,12 +161,11 @@ public class CoreTest {
 	 * @throws UnsupportedEncodingException
 	 * @throws FileNotFoundException
 	 * 
-	 * Check the result of an empty file is NaN
-	 * Is this the desired behavior? Would we want an error thrown instead?
+	 * Check the result of an empty file is 0
 	 */
 	public void emptyFileBehavior() throws IOException, UnsupportedEncodingException, FileNotFoundException {
 		c.LoadFileStream("junitfiles/emptyFileBehavior.txt");
-		assertTrue(Double.isNaN(c.Calculate()));
+		assertEquals(0.0, c.Calculate(), 0.001);
 	}
 	
 	@Test
