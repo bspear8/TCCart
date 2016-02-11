@@ -119,7 +119,7 @@ public class CoreTest {
 	 * @throws UnsupportedEncodingException
 	 * @throws FileNotFoundException
 	 * 
-	 * Tests that words below the minimum length are not counted.   
+	 * Tests that words below the minimum length are not counted. Minimum is inclusive.
 	 */
 	public void excludeWordsBelowMinimum() throws IOException, UnsupportedEncodingException, FileNotFoundException {
 		c.LoadFileStream("junitfiles/excludeWordsBelowMinimum.txt");
@@ -152,6 +152,34 @@ public class CoreTest {
 	 */
 	public void badFileTest() throws IOException, UnsupportedEncodingException, FileNotFoundException {
 		c.LoadFileStream("junitfiles/badFileTest.txt");
+	}
+	
+	@Test
+	/**
+	 * 
+	 * @throws IOException
+	 * @throws UnsupportedEncodingException
+	 * @throws FileNotFoundException
+	 * 
+	 * Whitespace characters ' ', '\n', and '\t' delimit words.
+	 */
+	public void wordDelimiters() throws IOException, UnsupportedEncodingException, FileNotFoundException {
+		c.LoadFileStream("junitfiles/whitespaceTest.txt");
+		assertEquals(5.0, c.Calculate(), 0.001);
+	}
+	
+	@Test
+	/**
+	 * 
+	 * @throws IOException
+	 * @throws UnsupportedEncodingException
+	 * @throws FileNotFoundException
+	 * 
+	 * If no delimiter is presented, only one sentence is seen and its length is returned.
+	 */
+	public void noDelimiters() throws IOException, UnsupportedEncodingException, FileNotFoundException {
+		c.LoadFileStream("junitfiles/noDelimiterTest.txt");
+		assertEquals(5.0, c.Calculate(), 0.001);
 	}
 	
 	@Test
