@@ -3,7 +3,7 @@ WC General Commands Manual
 ###NAME  
 
 
-Wc - calculates average sentence length from sentences in raw text file
+Wc - calculates average sentence length from sentences in raw text file.
  
 ###SYNOPSIS  
 
@@ -26,19 +26,19 @@ then 4 characters will be used.
 
 **-d**  
 Flag used to identify the delimiters to use indicate the end of a sentence.  
-Example:  -d<sequence_of_characters>  --- there should not be a space between the flag and the value  
->	     -d;/?-  
+*Example:*  -d [sequence_of_characters]  --- there must be a space between the flag and the delimiter characters.
+>	     -d ;/?-  
 >	     delimiters may appear in any order  
 >	     delimiters may only be single characters  
 	    
 **-l**  
-Flag to identify the minimum word length 
-Any value may be including a value of zero (0), there should not be a space between the flag and the value  
-*Example:*  -l3
+Flag to identify the minimum word length.
+Any value above 0 may be used, and there must be a space between the flag and the value.  
+*Example:*  -l 3
 	     
 	     
 Example when specifying both delimiter and minimum word length flags:  
->	java wc -l4 -d./;:! [filepath_filename]
+>	     java wc -l4 -d./;:! [filepath_filename]
 
 
 Other information:  
