@@ -4,7 +4,7 @@ package edu.gatech.seclass.project1;
 public class CommandLineArguments {
 	
     public static final String DEFAULT_DELIMITTERS = ".:;!?"; 
-    public static final int DEFAULT_MIN_WORD_LENGTH = 4;
+    public static final int DEFAULT_MIN_WORD_LENGTH = 3;
 	
 	private String[] _rawArgs;
 	
