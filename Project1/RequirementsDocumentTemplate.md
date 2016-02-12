@@ -18,7 +18,7 @@ The purpose of this project is to create an application for Lauren and her stude
 
 The user will interact with the product via a terminal command line interface. They will be able to specify the file they wish to input and some additional flag options to change the way the program will process the text file. The program will provide "user-friendly" readable errors to guide the user onto correct program usage and formatting.
 
-1.2.1  The user interface shall be executed from a command line by typing <path>/javac <appname> <filename> <flags>
+1.2.1  The user interface shall be executed from a command line by typing <path>/java <appname> <filename> <flags>
 
 1.2.2  Error conditions shall display relevant error messages to the user.  
 
@@ -28,13 +28,13 @@ The user will interact with the product via a terminal command line interface. T
 
 1.3.1.1 The program shall require no prior experience or training to operate.  
 
-1.3.2.1 The program shall require no knowledge of of the underlying technologies.  
+1.3.2.1 The program shall require no knowledge of the underlying technologies.  
 
 ##2 System Requirements
 
 ###2.1 Functional Requirements
 
-2.1.1. The program shall be executable from the command line using the "javac" command without additional options options switches.
+2.1.1. The program shall be executable from the command line using the "java" command without additional options / switches.
 
 2.1.2. The user shall provide a file path to the file they wish to be analyzed as a command line argument.
 
@@ -133,7 +133,7 @@ The user will interact with the product via a terminal command line interface. T
 	
 2.3.7.3 Space
 
-2.3.8 Both /r and /r/n are considered whitespace
+2.3.8 Both \r and \r\n are considered whitespace
 
 2.3.9  A standard rounding mode will be used in the program.  (.5 exclusive round down, .5 inclusive round up)
 	2.3.9.1  round to  two decimal places, not to an integer
@@ -146,7 +146,7 @@ The user will interact with the product via a terminal command line interface. T
 
 2.4.3  Output will go to stdout Errors to stderr
 
-2.4.4  /n will mean a new word
+2.4.4  \n will mean a new word
 
 2.4.5  The data will not be permanently stored
 
