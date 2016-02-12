@@ -1,10 +1,10 @@
 WC General Commands Manual
  
 NAME
-java wc {arguments} --- executes the java program "wc" to calculate the average sentence length 
+<path>/java wc [filepath_filename] [flags]--- executes the java program "wc" to calculate the average sentence length 
  
 SYNOPSIS
-java wc [arguments]  [filepath_filename]
+java wc [filepath_filename] [flags]
 
 DESCRIPTION
 	For each operand that specifies a default_delimiter and default_min_word_length, the "java wc" command executes the program 'wc' from the command line and returns a result indicating the average word length in a sentence to the user.  
@@ -18,7 +18,7 @@ The following options are available:
 	     -d;/?-
 	     delimiters may appear in any order
 	     delimiters may only be single characters
-	     
+	    
 -l  Flag to identify the minimum word length 
 	Any value may be including a value of zero (0), there should not be a space between the flag and the value
 	Example:  -l3
