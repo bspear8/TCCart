@@ -8,8 +8,8 @@ Wc - calculates average sentence length from sentences in raw text file
 ###SYNOPSIS  
 
 
-java Wc [filepath_filename] [flags]
-OR
+java Wc [filepath_filename] [flags]  
+OR  
 java Wc [flags] [filepath_filename]
 
 ###DESCRIPTION  
