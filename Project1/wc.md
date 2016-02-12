@@ -29,9 +29,10 @@ Example when specifying both delimiter and minimum word length flags:
 	java wc -l4 -d./;:! [filepath_filename]
 
 Other information:
-filepath -- a full path to the filename must be provided
 
-filename -- this must be a raw text file
+[filepath] -- a full path to the filename must be provided
+
+[filename] -- this must be a raw text file
 
 
 	     
