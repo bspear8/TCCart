@@ -9,7 +9,9 @@ java wc [filepath_filename] [flags]
 DESCRIPTION
 	For each operand that specifies a default_delimiter and default_min_word_length, the "java wc" command executes the program 'wc' from the command line and returns a result indicating the average word length in a sentence to the user.  
 
-	If no operand is specified for the default_delimiter, then the defaults delimiters used to identify the end of words will be ".:;!?" If no operand is specified for the default_min_word_length, then 4 is used.
+	If no operand is specified for the default_delimiter, then the defaults delimiters 
+	used to identify the end of words will be ".:;!?" If no operand is specified for the default_min_word_length, 
+	then 4 is used.
 
 The following options are available:
 
