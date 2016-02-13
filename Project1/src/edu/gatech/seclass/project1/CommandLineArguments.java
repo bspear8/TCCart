@@ -38,7 +38,7 @@ public class CommandLineArguments {
 		Boolean foundMinWordLengthFlag = false;
 		Boolean foundDelimittersFlag = false;
 		String delimiters = CommandLineArguments.DEFAULT_DELIMITTERS;
-		int minWordLength = CommandLineArguments.DEFAULT_MIN_WORD_LENGTH;
+		int minWordLength = CommandLineArguments.DEFAULT_MIN_WORD_LENGTH + 1;
 		String filePath = null;
 		
 		for (int index = 0; index < this._rawArgs.length; index++) {
@@ -56,7 +56,7 @@ public class CommandLineArguments {
 				index++;
 				if (index < this._rawArgs.length) {
 					try {
-						minWordLength = Integer.parseInt(this._rawArgs[index]);
+						minWordLength = Integer.parseInt(this._rawArgs[index]) + 1;
 					} catch (NumberFormatException e) {
 						throw new InvalidMinimumLengthException("Bad length", this._rawArgs[index]);
 					}
