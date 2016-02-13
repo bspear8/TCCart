@@ -59,14 +59,18 @@ public class Core {
 			char ch = (char) i;
 			
 			if (this.isDelimiter(ch)) {
+				
+				if (currentWordLength >= this._minWordLength + 1) {
+					currentNumWords++;
+				}
+				
 				if (currentNumWords > 0) {
 					if (currentWordLength >= this._minWordLength + 1) {
-						sentenceLengths.add(new Double(currentNumWords + 1));
-					} else {
 						sentenceLengths.add(new Double(currentNumWords));
-					}
-					
+					} 
 				}
+					
+				
 				currentNumWords = 0;
 				currentWordLength = 0;
 			} else if (Character.isWhitespace(ch)) {

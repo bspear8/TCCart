@@ -65,7 +65,7 @@ public class CoreTest {
 	 */
 	public void test3() throws IOException, UnsupportedEncodingException, FileNotFoundException {
 		c.LoadFileStream("junitfiles/Test3.txt");
-		assertEquals(2.5, c.Calculate(), 0.001);
+		assertEquals(2.0, c.Calculate(), 0.001);
 	}
 	
 	@Test
@@ -79,7 +79,7 @@ public class CoreTest {
 	 */
 	public void test4() throws IOException, UnsupportedEncodingException, FileNotFoundException {
 		c.LoadFileStream("junitfiles/Test4.txt");
-		assertEquals(6.0, c.Calculate(), 0.001);
+		assertEquals(5.0, c.Calculate(), 0.001);
 	}
 	
 	@Test
@@ -123,7 +123,7 @@ public class CoreTest {
 	 */
 	public void excludeWordsBelowMinimum() throws IOException, UnsupportedEncodingException, FileNotFoundException {
 		c.LoadFileStream("junitfiles/excludeWordsBelowMinimum.txt");
-		assertEquals(2.0, c.Calculate(), 0.001);
+		assertEquals(0, c.Calculate(), 0.001);
 	}
 	
 	@Test
@@ -179,7 +179,7 @@ public class CoreTest {
 	 */
 	public void noDelimiters() throws IOException, UnsupportedEncodingException, FileNotFoundException {
 		c.LoadFileStream("junitfiles/noDelimiterTest.txt");
-		assertEquals(5.0, c.Calculate(), 0.001);
+		assertEquals(4.0, c.Calculate(), 0.001);
 	}
 	
 	@Test
@@ -207,7 +207,7 @@ public class CoreTest {
 	 */
 	public void zeroLengthSentencesIgnored() throws IOException, UnsupportedEncodingException, FileNotFoundException {
 		c.LoadFileStream("junitfiles/zeroLengthSentencesIgnored.txt");
-		assertEquals(6, c.Calculate(), 0.001);
+		assertEquals(4, c.Calculate(), 0.001);
 	}
 	
 }
