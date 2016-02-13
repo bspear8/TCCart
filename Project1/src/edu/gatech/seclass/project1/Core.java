@@ -60,7 +60,7 @@ public class Core {
 			
 			if (this.isDelimiter(ch)) {
 				if (currentNumWords > 0) {
-					if (currentWordLength >= this._minWordLength) {
+					if (currentWordLength >= this._minWordLength + 1) {
 						sentenceLengths.add(new Double(currentNumWords + 1));
 					} else {
 						sentenceLengths.add(new Double(currentNumWords));
@@ -70,7 +70,7 @@ public class Core {
 				currentNumWords = 0;
 				currentWordLength = 0;
 			} else if (Character.isWhitespace(ch)) {
-				if (currentWordLength >= this._minWordLength) {
+				if (currentWordLength >= this._minWordLength + 1) {
 					currentNumWords++;
 				}
 				currentWordLength = 0;
