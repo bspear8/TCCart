@@ -113,7 +113,7 @@ Our final “Team Design” is a modified version of “Design 4.” The followi
 - Added private and public UML modifiers to all methods and attributes.
 - Added “OtherItem” class to enable application flexibility.
 - Added name attribute to Item class.
-- Added <<Interface>> and <<External>> notation where applicable.
+- Added Interface and External notation where applicable.
 
 ####Summary
 During our design discussion process, Team 38 looked for a diagram that was thoroughly detailed and left little to the imagination. This ultimately led to choosing to modify and utilize “Design 4” as the team design because it was the most detailed and clear diagram with very little of the implementation details left to be assumed or decided upon. While many of the diagrams were similar, we felt this design would require the fewest modifications to “perfect.” Most of the modifications dealt with corner cases that the original author oversaw and a fresh pair of eyes caught, or simply adding “nice to have” details to the diagram.
