@@ -1,7 +1,5 @@
 # Use Case Model
 
-*This is the template for your use case model. The parts in italics are concise explanations of what should go in the corresponding sections and should not appear in the final document.*
-
 **Author**: Team 38
 
 ## 1 Use Case Diagram
@@ -9,8 +7,6 @@
 ![alt text](https://github.gatech.edu/gt-omscs-softeng/6300Spring16Team38/blob/master/Project2/Design-Team/Docs/Use%20Case%20Diagram.PNG "Use Case Diagram")
 
 ## 2 Use Case Descriptions
-
-*For each use case in the use case diagram, this section should contain a description, with the following elements:*
 
 _Add Customer_
 - Requirements: Allows the manager to add a customer to the system.
