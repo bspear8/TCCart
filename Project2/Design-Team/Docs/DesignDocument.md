@@ -12,13 +12,28 @@
 
 *Describe any assumption, background, or dependencies of the software, its use, the operational environment, or significant project issues.*
 
+1.1.1 Each installation of the software has exactly one user.
+
+1.1.2 The software depends on an external library for printing cards.
+
+1.1.3 The software depends on an external library for scanning customer cards.
+
+1.1.4 The software depends on an external library for processing credit cards.
+
+1.1.5 The software depends on an external library for sending emails.
+
 ### 1.2 Constraints
 
 *Describe any constraints on the system that have a significant impact on the design of the system.*
 
+1.2.1 The software must be compatible with Android API Level 15 and greater.
+
 ### 1.3 System Environment
 
 *Describe the hardware and software that the system must operate in and interact with.*
+
+1.3.1 The software shall run on the Android operating system.
+
 
 ## 2 Architectural Design
 
