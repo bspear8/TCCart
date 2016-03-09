@@ -1,9 +1,5 @@
 # Test Plan
 
-*This is the template for your test plan. The parts in italics are concise explanations of what should go in the corresponding sections and should not appear in the final document.*
-
-This document seeks to describe the test methodologies and specific test cases to be implemented for the TCCart Android App.
-
 **Author**: Benjamin Pearce
 
 ## 1 Testing Strategy
