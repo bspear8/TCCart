@@ -57,7 +57,8 @@ Upon successful completion of new tests, and of the complete regression test, co
 #### 1.4.3 Bug Importance
 
 All bugs must be classified based on their level of importance.  The following levels of importance are defined:
-- Documentation: there is an error in documentation which does not affect how the system runs
+- Documentation: There is an error in documentation which does not affect how the system runs
+- Enhancement: This is an system improvement and is not required but may improve system performance, reduce costs, or improve user experience. 
 - Minor: A bug that is unlikely to occur and which only poses minor inconvenience to a user if it is encountered, and workarounds are possible.
 - Moderate: A bug that is likely to occur and poses moderate to significant inconvenience for which a workaround may or may not be possible, and if not, the functionality is not excessively hindered.  
 - Major: A bug that is likely to occur and for which a workaround is not possible and significantly reduces system functionality.
