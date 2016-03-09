@@ -2,7 +2,9 @@
 
 *This is the template for your test plan. The parts in italics are concise explanations of what should go in the corresponding sections and should not appear in the final document.*
 
-**Author**: \<person or team name\>
+This document seeks to describe the test methodologies and specific test cases to be implemented for the TCCart Android App.
+
+**Author**: Benjamin Pearce
 
 ## 1 Testing Strategy
 
@@ -20,19 +22,25 @@ Each class will have an associated unit test to verify methods associated with t
 
 #### 1.1.2 Integration Tests
 
-Integration tests will test the relationships between multiple classes and with external libraries.  Testing will simulate input using stubs so as to avoid test dependency on external libraries. As hardware is beyond the scope of this software project, and requiring working hardware will increase cost of testing, all hardware interfaces will be simulated as well and and data provided from hardware will be simulated.  
+Integration tests will test the relationships between multiple classes and with external libraries.    
 
 #### 1.1.3 System Tests
 
-System tests will be based on user stories.  The system tests seek to simulate expected use by actors interfacing with the system. Steps in the user story will be broken down into discrete tests to isolate areas where failures are present.  
+##### 1.1.3.1 Automated Tests
+
+System tests will be based on use cases described in the use-case model.  The system tests seek to simulate expected use by actors interfacing with the system. Steps in each use-case will be broken down into discrete tests to isolate areas where failures are present.  
+
+##### 1.1.3.2 Manual Tests
+
+Some system tests will be dependent on aspects which cannot be tested automatically, such as screen layout.  These tests will be run manually. During development, these tests may be run using an emulator, but to ensure proper funcitonality, they must be run on actual hardware prior to production.  
 
 #### 1.1.4 Regression Tests
 
 Regression tests exist to ensure addition of new features do not break existing functionality, or to ensure refactored code still passes test cases.  Regression tests will consist of all previously written test cases for the unit, integration, and system tests. 
 
-Changes to the system's application protocol interface (API) should be avoided wherever possible to prevent breaking existing test cases.  In the event that the API must be changed, all existing test cases dependent on that API must be updated accordingly.
+Changes to the system's application protocol interface (API) should be avoided wherever possible to preserve existing test cases.  In the event that the API must be changed, all existing test cases dependent on that API must be updated accordingly.
 
-The test suite will be built to run automatically.  Prior to any commit to the master branch, the entire test suite must be run in its entirety and all tests must be in a passed state.  If functionality has changed to make a particular test case obsolete, the test case must be amended or removed prior to commitment to the master branch.  
+The test suite will be built to run automatically, with the exception of some system tests run manually.  Prior to any commit to the master branch, the entire test suite must be run in its entirety and all tests must be in a passed state.  If functionality has changed to make a particular test case obsolete, the test case must be amended or removed prior to commitment to the master branch.  Changes to code which do not affect layout of screens or functionality of controls, do not require the manual tests to be rerun.  Manual tests do have to be rerun if changes are made to the user interface.  
 
 ### 1.2 Test Selection
 
@@ -40,7 +48,17 @@ The test suite will be built to run automatically.  Prior to any commit to the m
 
 ### 1.3 Adequacy Criterion
 
-*Define how you are going to assess the quality of your test cases. Typically, this involves some form of functional or structural coverage. If you plan to use different techniques at different testing levels (e.g., unit and system), you should clarify that.*
+#### 1.3.1 Unit Tests
+
+Unit tests will test have both positive and negative versions of the same test.  This will ensure that a test is not inadvertently written which always passes regardless of input.  Adequate measures, such as using stubs of dependent classes will be used to avoid inadvertent testing of other units or the interfaces between them.  
+
+#### 1.3.2 Integration Tests
+
+Testing will simulate input using stubs for external interfaces so as to avoid test dependency or inadvertently testing the external library. As hardware is beyond the scope of this software project, and requiring working hardware will increase cost of testing, all hardware interfaces will be simulated as well and and data provided from hardware will be simulated.
+
+#### 1.3.3 System Tests
+
+System tests will be based on the defined use-cases.  The use case diagram will demonstrate the different outputs expected during the test.  The test for each use case will be broken into steps consisting of smaller test cases to isolate where in the use-case the test might fail.  
 
 ### 1.4 Bug Tracking
 
@@ -66,8 +84,10 @@ All bugs must be classified based on their level of importance.  The following l
 
 ### 1.5 Technology
 
-As the system will be built in Java using the Android Studio IDE, it will utilize JUnit for a test framework.  
+As the system will be built in Java using the Android Studio IDE, it will utilize JUnit for a test framework. Espresso may be used to automate user interface testing of the application wherever possible.  
 
 ## 2 Test Cases
 
 *This section should be the core of this document. You should provide a table of test cases, one per row. For each test case, the table should provide its purpose, the steps necessary to perform the test, the expected result, the actual result (to be filled later), pass/fail information (to be filled later), and any additional information you think is relevant.*
+
+
