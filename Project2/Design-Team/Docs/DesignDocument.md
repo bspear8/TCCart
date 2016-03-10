@@ -70,10 +70,10 @@ This version of the design does not include any additional diagrams.
 
 4.3 Add customer screen
 
-![](https://github.gatech.edu/gt-omscs-softeng/6300Spring16Team38/blob/master/Project2/Design-Team/Docs/addcustomer.png "")
+![](https://github.gatech.edu/gt-omscs-softeng/6300Spring16Team38/blob/master/Project2/Design-Team/Docs/addcustomerscreen.png "")
 
 4.4 Edit customer screen
-![](https://github.gatech.edu/gt-omscs-softeng/6300Spring16Team38/blob/master/Project2/Design-Team/Docs/editcustomer.png "")
+![](https://github.gatech.edu/gt-omscs-softeng/6300Spring16Team38/blob/master/Project2/Design-Team/Docs/editcustomerscreen.png "")
 
 4.5 List all of a customer's transactions screen
 
