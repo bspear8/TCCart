@@ -6,8 +6,6 @@
 
 ### 1.1 Overall Strategy
 
-*This section should provide details about your unit-, integration-, system-, and regression-testing strategies. In particular, it should discuss which activities you will perform as part of your testing process, and who will perform such activities.*
-
 As this will be an Android App built on Android Studio, the preferred test library will be JUnit.  A test suite comprising unit, integration, and system level tests will be developed alonside the application.  
 
 For all tests developed, the developer should ensure the test case is failed when expected to fail and passes when expected to pass.  Both cases are required to ensure a test is not written in such a way that it will always report a false positive.  For each test, there should be at least one case that tests each expected output and each expected edge case.  
@@ -40,7 +38,17 @@ The test suite will be built to run automatically, with the exception of some sy
 
 ### 1.2 Test Selection
 
-*Here you should discuss how you are going to select your test cases, that is, which black-box and/or white-box techniques you will use. If you plan to use different techniques at different testing levels (e.g., unit and system), you should clarify that.*
+#### 1.2.1 Unit Tests
+
+Unit Tests will utilize white-box techniques to ensure that the funtions in each class provide predicted output given a set of inputs.  Tests will involve inspection of return values of methods or checking the state of the instance of the class before and after a function.  
+
+#### 1.2.2 Interface Tests
+
+Where multiple classes interact with each other, testing will be done following a white-box methodology where function return values and states of instances of the class will be inspected.  For interface tests regarding external libraries or hardware interface, the external library will be viewed as a black box to be used by the class, however the external library will be viewed as a black box.
+
+#### 1.2.3 System Tests
+
+System tests will be broken into smaller test cases to isolate if and where use-cases fail.  Following a white-box approach, the user-case which represents the test will be separated into multiple tests and the outputs or states will be checked at each step.  
 
 ### 1.3 Adequacy Criterion
 
