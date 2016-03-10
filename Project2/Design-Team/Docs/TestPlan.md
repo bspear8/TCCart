@@ -92,8 +92,6 @@ As the system will be built in Java using the Android Studio IDE, it will utiliz
 
 ## 2 Test Cases
 
-*This section should be the core of this document. You should provide a table of test cases, one per row. For each test case, the table should provide its purpose, the steps necessary to perform the test, the expected result, the actual result (to be filled later), pass/fail information (to be filled later), and any additional information you think is relevant.*
-
 ### 2.1 Unit Tests
 
 | Purpose              | Test Procedure           | Expected Output         | Actual Output   |
