@@ -30,6 +30,8 @@
 
 1.1.9 The device on which the app is installed has Internet access.
 
+1.1.10 The app only supports vertical orientation.
+
 ### 1.2 Constraints
 
 *Describe any constraints on the system that have a significant impact on the design of the system.*
