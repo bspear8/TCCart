@@ -1,16 +1,10 @@
 # Design Document
 
-*This is the template for your design document. The parts in italics are concise explanations of what should go in the corresponding sections and should not appear in the final document.*
-
 **Author**: Team 38
 
 ## 1 Design Considerations
 
-*The subsections below describe the issues that need to be addressed or resolved prior to or while completing the design, as well as issues that may influence the design process.*
-
 ### 1.1 Assumptions
-
-*Describe any assumption, background, or dependencies of the software, its use, the operational environment, or significant project issues.*
 
 1.1.1 Each installation of the app has exactly one user.
 
@@ -32,26 +26,19 @@
 
 1.1.10 The app only supports vertical orientation.
 
-### 1.2 Constraints
+1.1.11 The app is installed by the user using the resources checked in to the git repository.
 
-*Describe any constraints on the system that have a significant impact on the design of the system.*
+### 1.2 Constraints
 
 1.2.1 The software must be compatible with Android API Level 15 and greater.
 
 ### 1.3 System Environment
 
-*Describe the hardware and software that the system must operate in and interact with.*
-
 1.3.1 The software shall run on the Android operating system.
-
 
 ## 2 Architectural Design
 
-*The architecture provides the high-level design view of a system and provides a basis for more detailed design work. These subsections describe the top-level components of the system you are building and their relationships.*
-
 ### 2.1 Component Diagram
-
-*This section should provide and describe a diagram that shows the various components and how they are connected. This diagram shows the logical/functional components of the system, where each component represents a cluster of related functionality. In the case of simple systems, where there is a single component, this diagram may be unnecessary; in these cases, simply state so and concisely state why.*
 
 This component diagram demonstrates the simplicity of the TC Cart system. The diagram could be expanded to include components for Customer, Transaction, and Item. However, these components are better represented in the Class Diagram. Additionally, this diagram explicitly takes components such as the User Interface and the Persistence into account whereas the Class Diagram has no notion of these components.
 
@@ -59,24 +46,28 @@ This component diagram demonstrates the simplicity of the TC Cart system. The di
 
 ### 2.2 Deployment Diagram
 
-*This section should describe how the different components will be deployed on actual hardware devices. Similar to the previous subsection, this diagram may be unnecessary for simple systems; in these cases, simply state so and concisely state why.*
-
 All components of the TC Cart system will be deployed on a single Android device. Thus, it is unnecessary to provide a deployment diagram.
 
 ## 3 Low-Level Design
 
-*Describe the low-level design for each of the system components identified in the previous section. For each component, you should provide details in the following UML diagrams to show its internal structure.*
-
 ### 3.1 Class Diagram
-
-*In the case of an OO design, the internal structure of a software component would typically be expressed as a UML class diagram that represents the static class structure for the component and their relationships.*
 
 ![Class Diagram](https://github.gatech.edu/gt-omscs-softeng/6300Spring16Team38/blob/master/Project2/Design-Team/design-team.png "TCCart Class Diagram")
 
 ### 3.2 Other Diagrams
 
-*<u>Optionally</u>, you can decide to describe some dynamic aspects of your system using one or more behavioral diagrams, such as sequence and state diagrams.*
+This version of the design does not include any additional diagrams.
 
 ## 4 User Interface Design
-*For GUI-based systems, this section should provide the specific format/layout of the user interface of the system (e.g., in the form of graphical mockups).*
+
+4.1 List of customers
+
+![Screen](https://github.gatech.edu/gt-omscs-softeng/6300Spring16Team38/blob/master/Project2/Design-Team/Docs/customers.png "Customer Screen")
+
+4.2 Adding and editing a customer
+![Screen](https://github.gatech.edu/gt-omscs-softeng/6300Spring16Team38/blob/master/Project2/Design-Team/Docs/add-edit-customer.png "Customer Screen")
+
+4.3 Viewing a customer's transactions and discounts
+
+![Screen](https://github.gatech.edu/gt-omscs-softeng/6300Spring16Team38/blob/master/Project2/Design-Team/Docs/transactions.png "Customer Screen")
 
