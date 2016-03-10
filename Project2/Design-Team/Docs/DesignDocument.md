@@ -43,7 +43,7 @@
 
 *This section should provide and describe a diagram that shows the various components and how they are connected. This diagram shows the logical/functional components of the system, where each component represents a cluster of related functionality. In the case of simple systems, where there is a single component, this diagram may be unnecessary; in these cases, simply state so and concisely state why.*
 
-This component diagram demonstrates the simplicity of the TC Cart system. The diagram could be expanded to include components for Customer, Transaction, and Item. However, these components are better represented in the Class Diagram.
+This component diagram demonstrates the simplicity of the TC Cart system. The diagram could be expanded to include components for Customer, Transaction, and Item. However, these components are better represented in the Class Diagram. Additionally, this diagram explicitly takes components such as the User Interface and the Persistence into account whereas the Class Diagram has no notion of these components.
 
 ![Component Diagram](https://github.gatech.edu/gt-omscs-softeng/6300Spring16Team38/blob/master/Project2/Design-Team/Docs/component-diagram.png "Awesome deployment diagram")
 
