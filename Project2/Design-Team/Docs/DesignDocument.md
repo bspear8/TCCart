@@ -62,18 +62,24 @@ This version of the design does not include any additional diagrams.
 
 4.1 Home Screen
 
+![](https://github.gatech.edu/gt-omscs-softeng/6300Spring16Team38/blob/master/Project2/Design-Team/Docs/mainscreen.png "")
+
 4.2 List of customers screen
 
-![Screen](https://github.gatech.edu/gt-omscs-softeng/6300Spring16Team38/blob/master/Project2/Design-Team/Docs/customers.png "Customer Screen")
+![](https://github.gatech.edu/gt-omscs-softeng/6300Spring16Team38/blob/master/Project2/Design-Team/Docs/customersscreen.png "")
 
 4.3 Add customer screen
-![Screen](https://github.gatech.edu/gt-omscs-softeng/6300Spring16Team38/blob/master/Project2/Design-Team/Docs/add-edit-customer.png "Customer Screen")
+
+![](https://github.gatech.edu/gt-omscs-softeng/6300Spring16Team38/blob/master/Project2/Design-Team/Docs/addcustomer.png "")
 
 4.4 Edit customer screen
+![](https://github.gatech.edu/gt-omscs-softeng/6300Spring16Team38/blob/master/Project2/Design-Team/Docs/editcustomer.png "")
 
 4.5 List all of a customer's transactions screen
 
+![](https://github.gatech.edu/gt-omscs-softeng/6300Spring16Team38/blob/master/Project2/Design-Team/Docs/customertransactions.png "")
+
 4.6 List a single transaction of a customer's screen
 
-![Screen](https://github.gatech.edu/gt-omscs-softeng/6300Spring16Team38/blob/master/Project2/Design-Team/Docs/transactions.png "Customer Screen")
+![](https://github.gatech.edu/gt-omscs-softeng/6300Spring16Team38/blob/master/Project2/Design-Team/Docs/customertransaction.png "")
 
