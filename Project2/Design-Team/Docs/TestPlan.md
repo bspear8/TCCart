@@ -98,14 +98,22 @@ As the system will be built in Java using the Android Studio IDE, it will utiliz
 
 | Purpose              | Test Procedure           | Expected Output         | Actual Output   |
 |----------------------|--------------------------|-------------------------|-----------------|
-Item: getPrice | Create Item, run getPrice method | equal to price set in constructor
+Item: getPrice | run getPrice method | equal to price set in constructor
+CartManager: scanCustomerCard | run scanCustomerCard method with valid input | valid customer ID
+Discount: computeDiscount | run computeDisccount with amount | negative money value
+
 
 ### 2.2 Integration Tests
 
 | Purpose              | Test Procedure           | Expected Output         | Actual Output   |
 |----------------------|--------------------------|-------------------------|-----------------|
 Customer: addTransactions | Create customer, create transaction, run Customer.addTransaction with the transaction as an input | Customer.transactions list includes the transaction
-Customer: addVipDiscountStatus | Create customer, create VIPDiscount run Customer.addVipDiscountStatus with the VIPDiscount as an input | verify Customer is now VIP
+Customer: addVipDiscountStatus | Create customer, create VIPDiscount run Customer.addVipDiscountStatus with the VIPDiscount as an input | customer is now VIP
+CartManager: processPayment | Create transaction, run CartManager.processPayment with transaction and CreditCard stub as input | transaction with finalized information
+CartManager: processPayment with invalid credit card info | Create transaction, run CartManager.processPayment with transaction and InvalidCreditCard stub as input | error message
+CartManager: printCustomerCard | create customer, run CartManager.printCustomerCard | valid interface for printer API
+CartManager: scanCreditCard | run CartManager.scanCreditCard with CreditCard stub | new credit card object with valid information
+CartManager: scanCreditCard with invalid information | run CartManager.scanCreditCard with InvalidCreditCard stub | error message
 
 
 ### 2.3 System Tests
@@ -113,8 +121,12 @@ Purpose | Test Procedure | Expected Output | Actual Output |
 ---|---|---|---
 Addition of Customer | Manager selects 'Add Customer', Manager enters information for customer, Manager selects 'Create Customer' | New customer with expected fields is added to the array of customers
 Edit of Customer information | Manager selects 'Edit Customer Information', Manager enters new information for customer, Manager selects 'Accept Changes' | Customer information is changed from prior data to new data
+Adding Items to a Transaction | Manager selects 'Create Transaction', Manager selects prompt for item, Manager adds item | new transaction instance with item in lineItems
 Process Transactions | Manager selects 'Process Transaction', Manager receives input from CreditCard stub | Transaction with finalized information
 Process Transaction with Customer Card | Transaction is created, input stub of scanner API used to select a customer, customer is added to the transaction, transaction is processed with credit card | Transaction with finalized information, valid email information to provide to email API
+Process Transaction with Customer Card and above credit threshold | Transaction is created, input stub of scanner API used to select a customer, customer is added to the transaction, transaction is processed with credit card | Transaction with finalized information, valid email information to provide to email API, 
+Process Transaction with Customer Card with VIP status | Transaction is created, input stub of scanner API used to select a customer, customer with VIP status is added to the transaction, transaction is processed with credit card | transaction with 10% VIP discount applied
+Process Transaction with Customer Card with available discount | Transaction is created, input stub of scanner API used to select a customer, customer with VIP status is added to the transaction, transaction is processed with credit card | transaction with remaining credit amount applied to total
 List Transactions | Manager selects 'List Transactions', Manager receives input from CustomerCardScanner stub | List of all transactions associated with that customer
 Print Customer Card | Manager selects a customer from the system, Manager selects 'Print Customer Card' | Output meeting printer API requirements with customer QR code embedded
 
