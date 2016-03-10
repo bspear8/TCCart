@@ -83,3 +83,7 @@ This version of the design does not include any additional diagrams.
 
 ![](https://github.gatech.edu/gt-omscs-softeng/6300Spring16Team38/blob/master/Project2/Design-Team/Docs/customertransaction.png "")
 
+4.7 Scanner customer card screen
+
+![](https://github.gatech.edu/gt-omscs-softeng/6300Spring16Team38/blob/master/Project2/Design-Team/Docs/scannerscreen.png "")
+
