@@ -12,15 +12,23 @@
 
 *Describe any assumption, background, or dependencies of the software, its use, the operational environment, or significant project issues.*
 
-1.1.1 Each installation of the software has exactly one user.
+1.1.1 Each installation of the app has exactly one user.
 
-1.1.2 The software depends on an external library for printing cards.
+1.1.2 The software user is authenticated using the built-in mechanisms of the Android device.
 
-1.1.3 The software depends on an external library for scanning customer cards.
+1.1.3 The software depends on an external library for printing cards.
 
-1.1.4 The software depends on an external library for processing credit cards.
+1.1.4 The software depends on an external library for scanning customer cards.
 
-1.1.5 The software depends on an external library for sending emails.
+1.1.5 The software depends on an external library and for processing credit cards.
+
+1.1.6 The system depends on an external service for processing credit cards.
+
+1.1.7 The software depends on an external library for sending emails.
+
+1.1.8 The system depends on an external service for sending emails.
+
+1.1.9 The device on which the app is installed has Internet access.
 
 ### 1.2 Constraints
 
