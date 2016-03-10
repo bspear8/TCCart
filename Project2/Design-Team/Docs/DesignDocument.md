@@ -80,3 +80,14 @@ All components of the TC Cart system will be deployed on a single Android device
 ## 4 User Interface Design
 *For GUI-based systems, this section should provide the specific format/layout of the user interface of the system (e.g., in the form of graphical mockups).*
 
+4.1 List of customers
+
+![Screen](https://github.gatech.edu/gt-omscs-softeng/6300Spring16Team38/blob/master/Project2/Design-Team/Docs/customers.png "Customer Screen")
+
+4.2 Adding and editing a customer
+![Screen](https://github.gatech.edu/gt-omscs-softeng/6300Spring16Team38/blob/master/Project2/Design-Team/Docs/add-edit-customer.png "Customer Screen")
+
+4.4 Viewing a customer's transactions and discounts
+
+![Screen](https://github.gatech.edu/gt-omscs-softeng/6300Spring16Team38/blob/master/Project2/Design-Team/Docs/transactions.png "Customer Screen")
+
