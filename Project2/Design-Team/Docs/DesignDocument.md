@@ -60,14 +60,20 @@ This version of the design does not include any additional diagrams.
 
 ## 4 User Interface Design
 
-4.1 List of customers
+4.1 Home Screen
+
+4.2 List of customers screen
 
 ![Screen](https://github.gatech.edu/gt-omscs-softeng/6300Spring16Team38/blob/master/Project2/Design-Team/Docs/customers.png "Customer Screen")
 
-4.2 Adding and editing a customer
+4.3 Add customer screen
 ![Screen](https://github.gatech.edu/gt-omscs-softeng/6300Spring16Team38/blob/master/Project2/Design-Team/Docs/add-edit-customer.png "Customer Screen")
 
-4.3 Viewing a customer's transactions and discounts
+4.4 Edit customer screen
+
+4.5 List all of a customer's transactions screen
+
+4.6 List a single transaction of a customer's screen
 
 ![Screen](https://github.gatech.edu/gt-omscs-softeng/6300Spring16Team38/blob/master/Project2/Design-Team/Docs/transactions.png "Customer Screen")
 
