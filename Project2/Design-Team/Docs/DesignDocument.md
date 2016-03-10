@@ -87,3 +87,9 @@ This version of the design does not include any additional diagrams.
 
 ![](https://github.gatech.edu/gt-omscs-softeng/6300Spring16Team38/blob/master/Project2/Design-Team/Docs/scannerscreen.png "")
 
+4.8 Purchase menu
+
+![](https://github.gatech.edu/gt-omscs-softeng/6300Spring16Team38/blob/master/Project2/Design-Team/Docs/additemtopurchase.png "")
+
+
+
