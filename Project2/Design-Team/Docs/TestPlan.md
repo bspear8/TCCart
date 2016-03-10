@@ -94,4 +94,30 @@ As the system will be built in Java using the Android Studio IDE, it will utiliz
 
 *This section should be the core of this document. You should provide a table of test cases, one per row. For each test case, the table should provide its purpose, the steps necessary to perform the test, the expected result, the actual result (to be filled later), pass/fail information (to be filled later), and any additional information you think is relevant.*
 
+### 2.1 Unit Tests
+
+| Purpose              | Test Procedure           | Expected Output         | Actual Output   |
+|----------------------|--------------------------|-------------------------|-----------------|
+Item: getPrice | Create Item, run getPrice method | equal to price set in constructor
+
+### 2.2 Integration Tests
+
+| Purpose              | Test Procedure           | Expected Output         | Actual Output   |
+|----------------------|--------------------------|-------------------------|-----------------|
+Customer: addTransactions | Create customer, create transaction, run Customer.addTransaction with the transaction as an input | Customer.transactions list includes the transaction
+Customer: addVipDiscountStatus | Create customer, create VIPDiscount run Customer.addVipDiscountStatus with the VIPDiscount as an input | verify Customer is now VIP
+
+
+### 2.3 System Tests
+Purpose | Test Procedure | Expected Output | Actual Output |
+---|---|---|---
+Addition of Customer | Manager selects 'Add Customer', Manager enters information for customer, Manager selects 'Create Customer' | New customer with expected fields is added to the array of customers
+Edit of Customer information | Manager selects 'Edit Customer Information', Manager enters new information for customer, Manager selects 'Accept Changes' | Customer information is changed from prior data to new data
+Process Transactions | Manager selects 'Process Transaction', Manager receives input from CreditCard stub | Transaction with finalized information
+Process Transaction with Customer Card | Transaction is created, input stub of scanner API used to select a customer, customer is added to the transaction, transaction is processed with credit card | Transaction with finalized information, valid email information to provide to email API
+List Transactions | Manager selects 'List Transactions', Manager receives input from CustomerCardScanner stub | List of all transactions associated with that customer
+Print Customer Card | Manager selects a customer from the system, Manager selects 'Print Customer Card' | Output meeting printer API requirements with customer QR code embedded
+
+
+
 
