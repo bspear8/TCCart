@@ -81,5 +81,5 @@ This version of the design does not include any additional diagrams.
 
 4.6 List a single transaction of a customer's screen
 
-![](https://github.gatech.edu/gt-omscs-softeng/6300Spring16Team38/blob/master/Project2/Design-Team/Docs/customertransaction.png "")
+<img src="https://github.gatech.edu/gt-omscs-softeng/6300Spring16Team38/blob/master/Project2/Design-Team/Docs/customertransaction.png" width="200">
 
