@@ -4,7 +4,7 @@
 
 ## 1 Introduction
 
-The purpose of the TCCart Android application is to facilitate credit card transacations and rewards earning, tracking, and utilization through an intuitive payment and rewards management system for tea and coffee cart sales.
+The purpose of the TCCart Android application is to facilitate credit card transactions and rewards earning, tracking, and utilization through an intuitive payment and rewards management system for tea and coffee cart sales.
 
 ## 2 Process Description
 
