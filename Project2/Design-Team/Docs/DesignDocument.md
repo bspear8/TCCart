@@ -45,11 +45,13 @@
 
 This component diagram demonstrates the simplicity of the TC Cart system. The diagram could be expanded to include components for Customer, Transaction, and Item. However, these components are better represented in the Class Diagram. Additionally, this diagram explicitly takes components such as the User Interface and the Persistence into account whereas the Class Diagram has no notion of these components.
 
-![Component Diagram](https://github.gatech.edu/gt-omscs-softeng/6300Spring16Team38/blob/master/Project2/Design-Team/Docs/component-diagram.png "Awesome deployment diagram")
+![Component Diagram](https://github.gatech.edu/gt-omscs-softeng/6300Spring16Team38/blob/master/Project2/Design-Team/Docs/component-diagram.png "TCCart Component Diagram")
 
 ### 2.2 Deployment Diagram
 
 *This section should describe how the different components will be deployed on actual hardware devices. Similar to the previous subsection, this diagram may be unnecessary for simple systems; in these cases, simply state so and concisely state why.*
+
+All components of the TC Cart system will be deployed on a single Android device. Thus, it is unnecessary to provide a deployment diagram.
 
 ## 3 Low-Level Design
 
@@ -59,7 +61,7 @@ This component diagram demonstrates the simplicity of the TC Cart system. The di
 
 *In the case of an OO design, the internal structure of a software component would typically be expressed as a UML class diagram that represents the static class structure for the component and their relationships.*
 
-![Class Diagram](https://github.gatech.edu/gt-omscs-softeng/6300Spring16Team38/blob/master/Project2/Design-Team/design-team.png "Awesome class diagram")
+![Class Diagram](https://github.gatech.edu/gt-omscs-softeng/6300Spring16Team38/blob/master/Project2/Design-Team/design-team.png "TCCart Class Diagram")
 
 ### 3.2 Other Diagrams
 
