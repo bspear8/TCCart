@@ -56,7 +56,13 @@ All components of the TC Cart system will be deployed on a single Android device
 
 ### 3.2 Other Diagrams
 
-This version of the design does not include any additional diagrams.
+3.2.1 Process Purchase Sequence Diagram
+
+The process purchase sequence diagram below shows the interaction between the human and the system as a Manager processes an order. Alternative sequences have been omitted from the diagram for simplicity's sake. For example, an error path is not shown for when a credit card is denied. External services and libraries such as the external payment service are not shown in the diagram. We did not include a focus of control for the user interface because the user interface is active even after the sequence concludes.
+
+![](https://github.gatech.edu/gt-omscs-softeng/6300Spring16Team38/blob/master/Project2/Design-Team/Docs/processpurchasesequencediagram.png "")
+
+
 
 ## 4 User Interface Design
 
