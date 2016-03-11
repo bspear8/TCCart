@@ -75,19 +75,23 @@ This version of the design does not include any additional diagrams.
 4.4 Edit customer screen
 ![](https://github.gatech.edu/gt-omscs-softeng/6300Spring16Team38/blob/master/Project2/Design-Team/Docs/editcustomerscreen.png "")
 
-4.5 List all of a customer's transactions screen
+4.5 Individual customer screen
+
+![](https://github.gatech.edu/gt-omscs-softeng/6300Spring16Team38/blob/master/Project2/Design-Team/Docs/customercreen.png "")
+
+4.6 List all of a customer's transactions screen
 
 ![](https://github.gatech.edu/gt-omscs-softeng/6300Spring16Team38/blob/master/Project2/Design-Team/Docs/customertransactions.png "")
 
-4.6 List a single transaction of a customer's screen
+4.7 List a single transaction of a customer's screen
 
 ![](https://github.gatech.edu/gt-omscs-softeng/6300Spring16Team38/blob/master/Project2/Design-Team/Docs/customertransaction.png "")
 
-4.7 Scanner customer card screen
+4.8 Scanner customer card screen
 
 ![](https://github.gatech.edu/gt-omscs-softeng/6300Spring16Team38/blob/master/Project2/Design-Team/Docs/scannerscreen.png "")
 
-4.8 Purchase menu
+4.9 Purchase menu
 
 ![](https://github.gatech.edu/gt-omscs-softeng/6300Spring16Team38/blob/master/Project2/Design-Team/Docs/additemtopurchase.png "")
 
