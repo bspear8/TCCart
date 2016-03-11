@@ -2,6 +2,10 @@
 
 **Author**: Benjamin Pearce
 
+| Version | Description     |
+| --------|:---------------:|
+| V1      | Initial version |
+
 ## 1 Testing Strategy
 
 ### 1.1 Overall Strategy
