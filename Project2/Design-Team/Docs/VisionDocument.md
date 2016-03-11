@@ -8,7 +8,7 @@
 
 ## 1 Introduction
 
-TCCart is a Payment and Rewards Management System for Tea and Coffee Carts that runs on an Android platform. The application is intended to be used by customers to make credit card payments and to generate product loyalty via a rewards system.
+TCCart is a Payment and Rewards Management System for Tea and Coffee Carts that runs on an Android platform. The application is intended to be used by a Cart Manager to process credit card payments and to generate product loyalty via a rewards system.
 
 ## 2 Business Needs/Requirements
 
