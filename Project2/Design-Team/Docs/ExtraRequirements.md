@@ -19,3 +19,5 @@
 1.5 The UI should be responsive in that it should not take longer than 1 second to perform an operation.
 
 1.5.1 When there operations that take longer than 1 second, the UI should display a status bar to let the user know that work is being performed.
+
+1.6 The system will depend on the built-in Android authentication and authorization mechanisms for security.
