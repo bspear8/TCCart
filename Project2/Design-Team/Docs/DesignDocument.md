@@ -77,7 +77,7 @@ This version of the design does not include any additional diagrams.
 
 4.5 Individual customer screen
 
-![](https://github.gatech.edu/gt-omscs-softeng/6300Spring16Team38/blob/master/Project2/Design-Team/Docs/customercreen.png "")
+![](https://github.gatech.edu/gt-omscs-softeng/6300Spring16Team38/blob/master/Project2/Design-Team/Docs/customerscreen.png "")
 
 4.6 List all of a customer's transactions screen
 
