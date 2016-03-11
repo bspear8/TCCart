@@ -6,13 +6,9 @@
 
 ### 1.1 Overall Strategy
 
-As this will be an Android App built on Android Studio, the preferred test library will be JUnit.  A test suite comprising unit, integration, and system level tests will be developed alonside the application.  
-
-For all tests developed, the developer should ensure the test case is failed when expected to fail and passes when expected to pass.  Both cases are required to ensure a test is not written in such a way that it will always report a false positive.  For each test, there should be at least one case that tests each expected output and each expected edge case.  
-
 #### 1.1.1 Unit Tests
 
-Each class will have an associated unit test to verify methods associated with that class are implemented correctly.  For methods that require other user-defined classes as an input, a stub will be used in place of the dependent class.  Unit tests will avoid testing methods or interfaces that are not exclusive to the unit under test.  
+Each class will have an associated unit test to verify methods associated with that class are implemented correctly. Unit tests will avoid testing methods or interfaces that are not exclusive to the unit under test.  
 
 #### 1.1.2 Integration Tests
 
@@ -26,7 +22,7 @@ System tests will be based on use cases described in the use-case model.  The sy
 
 ##### 1.1.3.2 Manual Tests
 
-Some system tests will be dependent on aspects which cannot be tested automatically, such as screen layout.  These tests will be run manually. During development, these tests may be run using an emulator, but to ensure proper funcitonality, they must be run on actual hardware prior to production.  
+Some system tests will be dependent on aspects which cannot be tested automatically, such as screen layout and visibility.  These tests will be run manually. During development, these tests may be run using an emulator, but to ensure proper funcitonality, they must be run on actual hardware prior to production.  
 
 #### 1.1.4 Regression Tests
 
@@ -76,7 +72,7 @@ The steps used to reproduce the bug should be incorporated into a new test case,
 
 Upon successful completion of new tests, and of the complete regression test, code should be inspected to ensure it meets style and maintainability requirements.  If code must be refactored, the entire test suite should be rerun.  All tests must pass before commitment to the master branch. An exception to this may be made if new bugs produced are of lesser importance than the bug being corrected.  
 
-#### 1.4.3 Bug Importance
+#### 1.4.3 Bug Classification
 
 All bugs must be classified based on their level of importance.  The following levels of importance are defined:
 - Documentation: There is an error in documentation which does not affect how the system runs
@@ -100,18 +96,22 @@ Item: getPrice | run getPrice method | equal to price set in constructor
 CartManager: scanCustomerCard | run scanCustomerCard method with valid input | valid customer ID
 Discount: computeDiscount | run computeDisccount with amount | negative money value
 
-
 ### 2.2 Integration Tests
 
 | Purpose              | Test Procedure           | Expected Output         | Actual Output   |
 |----------------------|--------------------------|-------------------------|-----------------|
-Customer: addTransactions | Create customer, create transaction, run Customer.addTransaction with the transaction as an input | Customer.transactions list includes the transaction
+Customer: addTransaction | Create customer, create transaction, run Customer.addTransaction with the transaction as an input | Customer.transactions list includes the transaction
 Customer: addVipDiscountStatus | Create customer, create VIPDiscount run Customer.addVipDiscountStatus with the VIPDiscount as an input | customer is now VIP
+Customer: listTransactions | create transaction under customer, run Customer.listTransactions | list with created transactions
+Customer: printCustomerCard | run printCustomerCard | output is compatible with printer API
+CartManager: printCustomerCard | create customer, run CartManager.printCustomerCard | valid interface for printer API
 CartManager: processPayment | Create transaction, run CartManager.processPayment with transaction and CreditCard stub as input | transaction with finalized information
 CartManager: processPayment with invalid credit card info | Create transaction, run CartManager.processPayment with transaction and InvalidCreditCard stub as input | error message
 CartManager: printCustomerCard | create customer, run CartManager.printCustomerCard | valid interface for printer API
 CartManager: scanCreditCard | run CartManager.scanCreditCard with CreditCard stub | new credit card object with valid information
 CartManager: scanCreditCard with invalid information | run CartManager.scanCreditCard with InvalidCreditCard stub | error message
+Transaction: addDiscount (VIP) | create VIP Discount, run Transaction.addDiscount with created Discount | transaction discounts includes added discount
+Transaction: addDiscount (Credit) | create Credit Discount, rund Transaction.addDiscount with created Discount | transaction discounts includes added discount
 
 
 ### 2.3 System Tests
