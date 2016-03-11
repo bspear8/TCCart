@@ -2,6 +2,10 @@
 
 **Author**: Team 38
 
+| Version | Description     |
+| --------|:---------------:|
+| V1      | Initial version |
+
 ## 1 Use Case Diagram
 
 ![alt text](https://github.gatech.edu/gt-omscs-softeng/6300Spring16Team38/blob/master/Project2/Design-Team/Docs/Use%20Case%20Diagram.PNG "Use Case Diagram")
