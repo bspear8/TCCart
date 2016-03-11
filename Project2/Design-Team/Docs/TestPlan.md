@@ -12,21 +12,21 @@
 
 #### 1.1.1 Unit Tests
 
-Each class will have an associated unit test to verify methods associated with that class are implemented correctly. Unit tests will avoid testing methods or interfaces that are not exclusive to the unit under test.  
+Each class will have an associated unit test to verify methods associated with that class are implemented correctly. Unit tests will avoid testing methods or interfaces that are not exclusive to the unit under test. Unit tests shall be run by the Development Lead, the developers, and the QA Manager.
 
 #### 1.1.2 Integration Tests
 
-Integration tests will test the relationships between multiple classes and with external libraries.    
+Integration tests will test the relationships between multiple classes and with external libraries. Integration Tests shall be run by the Development Lead, the developers, and the QA Manager.
 
 #### 1.1.3 System Tests
 
 ##### 1.1.3.1 Automated Tests
 
-System tests will be based on use cases described in the use-case model.  The system tests seek to simulate expected use by actors interfacing with the system. Steps in each use-case will be broken down into discrete tests to isolate areas where failures are present.  
+System tests will be based on use cases described in the use-case model.  The system tests seek to simulate expected use by actors interfacing with the system. Steps in each use-case will be broken down into discrete tests to isolate areas where failures are present. Automated tests shall be run by the QA Manager.
 
 ##### 1.1.3.2 Manual Tests
 
-Some system tests will be dependent on aspects which cannot be tested automatically, such as screen layout and visibility.  These tests will be run manually. During development, these tests may be run using an emulator, but to ensure proper funcitonality, they must be run on actual hardware prior to production.  
+Some system tests will be dependent on aspects which cannot be tested automatically, such as screen layout and visibility.  These tests will be run manually. During development, these tests may be run using an emulator, but to ensure proper funcitonality, they must be run on actual hardware prior to production. Manual Tests shall be run by the QA Manager and the Documentation Lead.
 
 #### 1.1.4 Regression Tests
 
@@ -34,7 +34,9 @@ Regression tests exist to ensure addition of new features do not break existing 
 
 Changes to the system's application protocol interface (API) should be avoided wherever possible to preserve existing test cases.  In the event that the API must be changed, all existing test cases dependent on that API must be updated accordingly.
 
-The test suite will be built to run automatically, with the exception of some system tests run manually.  Prior to any commit to the master branch, the entire test suite must be run in its entirety and all tests must be in a passed state.  If functionality has changed to make a particular test case obsolete, the test case must be amended or removed prior to commitment to the master branch.  Changes to code which do not affect layout of screens or functionality of controls, do not require the manual tests to be rerun.  Manual tests do have to be rerun if changes are made to the user interface.  
+The test suite will be built to run automatically, with the exception of some system tests run manually.  Prior to any commit to the master branch, the entire test suite must be run in its entirety and all tests must be in a passed state.  If functionality has changed to make a particular test case obsolete, the test case must be amended or removed prior to commitment to the master branch.  Changes to code which do not affect layout of screens or functionality of controls, do not require the manual tests to be rerun.  Manual tests do have to be rerun if changes are made to the user interface.
+
+The owners of the previously run tests have the responsiblity to run each of his or her assigned tests.
 
 ### 1.2 Test Selection
 
