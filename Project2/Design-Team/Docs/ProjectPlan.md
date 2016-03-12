@@ -70,7 +70,7 @@ Successful project submission.
 
 ###### Description
 
-This process phase is purely notational for the purposes of this project. Post release the team would normally support the code for a specified length of time, fixing any newly discovered errors or modifying the project to meet new customer needs.  
+This process phase is purely notional for the purposes of this project. Post release the team would normally support the code for a specified length of time, fixing any newly discovered errors or modifying the project to meet new customer needs.  
 
 ###### Entrance Criteria
 
