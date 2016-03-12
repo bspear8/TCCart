@@ -56,7 +56,7 @@ System tests will be broken into smaller test cases to isolate if and where use-
 
 #### 1.3.1 Unit Tests
 
-Unit tests will test have both positive and negative versions of the same test.  This will ensure that a test is not inadvertently written which always passes regardless of input.  Adequate measures, such as using stubs of dependent classes will be used to avoid inadvertent testing of other units or the interfaces between them.  
+Unit tests will test both positive and negative versions of the same test.  This will ensure that a test is not inadvertently written which always passes regardless of input.  Adequate measures, such as using stubs of dependent classes will be used to avoid inadvertent testing of other units or the interfaces between them.  
 
 #### 1.3.2 Integration Tests
 
@@ -74,7 +74,7 @@ Bugs will be tracked using "Issues" in GitHub. When a bug is observed, detailed 
 
 #### 1.4.2 Bug Correction
 
-The steps used to reproduce the bug should be incorporated into a new test case, or set of test cases that adequately test the bug. The new test case must be observed to "fail" and demonstrate the behavior of the bug before any coding is to be done to correct the bug. Changes to the code to correct the bug shall be limited in scope to bug being corrected. That is, if another bug is observed, it should have its own bugfix branch and test suite.  When sufficient code changes have been implemented to correct the bug, a regression test of the entire test suite must be completed to ensure new code changes did not affect existing functionality.
+The steps used to reproduce the bug should be incorporated into a new test case, or set of test cases that adequately test the bug. The new test case must be observed to "fail" and demonstrate the behavior of the bug before any coding is to be done to correct the bug. Changes to the code to correct the bug shall be limited in scope to the bug being corrected. That is, if another bug is observed, it should have its own bugfix branch and test suite.  When sufficient code changes have been implemented to correct the bug, a regression test of the entire test suite must be completed to ensure new code changes did not affect existing functionality.
 
 Upon successful completion of new tests, and of the complete regression test, code should be inspected to ensure it meets style and maintainability requirements.  If code must be refactored, the entire test suite should be rerun.  All tests must pass before commitment to the master branch. An exception to this may be made if new bugs produced are of lesser importance than the bug being corrected.  
 
