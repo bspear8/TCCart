@@ -16,7 +16,7 @@ Currently cart managers do not have a way to quickly determine a customer's rewa
 
 The tea and coffee carts operate in Piedmont Park.  Due to the high risk for robbery, if the cart took cash payments, tea and coffee purchases can only be made using credit cards. Often customers in the park, do not have their physical credit cards readily available.  The TCCart application will help facilitate credit card transactions.
 
-In order to accurately process credit card payments, the customers and cart managers need to know what the customer's reward balance.  Reward credits will automatically be applied toward a customer's next purchase. VIP customers will receive a 10% discount toward all purchases made in the calendar year following the year their VIP status is achieved.  
+In order to accurately process credit card payments, the customers and cart managers need to know the customer's reward balance.  Reward credits will automatically be applied toward a customer's next purchase. VIP customers will receive a 10% discount toward all purchases made in the calendar year following the year their VIP status is achieved.  
 
 The TCCart application will help cart managers access up-to-date customer account information and edit information as needed providing an efficient platform to better service their customers.  It will also make purchasing items more convenient for customers while visiting Piedmont Park. The rewards system will generate customer loyalty and should lead to repeat sales.
 
@@ -42,13 +42,13 @@ TCCart, an Android application, will provide real-time access to current custome
 
 Additionally, the TCCart application will interface with a Payment Processing Service Provider to obtain credit card approval for a given purchase.  The TCCart application will also interact with a NotifierUtility to send an email to the customer when a purchase is completed, when a credit/reward is received, and when a customer obtains VIP status for the following year.
 
-The application is being developed to align with future needs for incrementatl, iterative work cadences and possible adaptation of agile software development processes, as an alternative to waterfall and traditional sequential development methods.
+The application is being developed to align with future needs for incremental, iterative work cadences and possible adaptation of agile software development processes, as an alternative to waterfall and traditional sequential development methods.
 
 ## 4 Major Features (Optional)
 
 ## 5 Scope and Limitations
 
-The initial version of the TCCart application will focus on the the needs of the customer and cart manager to facilitate credit card payments, rewards management (tracking, earning, usage), purchase display management, and customer account creation and maintenance. The system will only maintain limited information that identifies a customer beyond the Customer ID.  
+The initial version of the TCCart application will focus on the needs of the customer and cart manager to facilitate credit card payments, rewards management (tracking, earning, usage), purchase display management, and customer account creation and maintenance. The system will only maintain limited information that identifies a customer beyond the Customer ID.  
 
 In particular this means the following features will not be available:
 
