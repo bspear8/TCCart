@@ -16,7 +16,7 @@ Capture all possible requirements for the TCCart project in a requirements speci
 ###### Entrance Criteria
 Team 38 will use the requirements listed for assignment 5 and document any extra requirements in the ExtraRequirements.md document.
 
-###### Exit Critera
+###### Exit Criteria
 Full set of requirements mapped out in a complete requirements specification document.
 
 ### Design System:
@@ -46,7 +46,7 @@ All units of code are written and testing is complete.
 ###### Description 
 The units of code are integrated into a single product and then the product as a whole is tested.  
 
-###### Entrance Critera
+###### Entrance Criteria
 All units of code are written and unit tests are complete.  
 
 ###### Exit Criteria
@@ -56,9 +56,9 @@ The product is integrated and is fully functional with no known errors.
 
 ###### Description
 
-The product is released to the customer. In this case, the product github commit code is submitted to tsquare by the project manager.  
+The product is released to the customer. In this case, the product GitHub commit code is submitted to T-Square by the project manager.  
 
-###### Entrance Critera
+###### Entrance Criteria
 
 The product is integrated and is fully functional with no known errors.  
 
@@ -70,7 +70,7 @@ Successful project submission.
 
 ###### Description
 
-This process phase is purely notional for the purposes of this project. Post release the team would normally support the code for a specified length of time, fixing any newly discovered errors or modifying the project to meet new customer needs.  
+This process phase is purely notational for the purposes of this project. Post release the team would normally support the code for a specified length of time, fixing any newly discovered errors or modifying the project to meet new customer needs.  
 
 ###### Entrance Criteria
 
@@ -78,7 +78,7 @@ This phase begins immediately following product release.
 
 ###### Exit Criteria
 
-After pre-agreed upon period of time has expired or the product is no longer used by the customer.  
+After a pre-agreed upon period of time has expired or the product is no longer used by the customer.  
 
 ## 3 Team
 
