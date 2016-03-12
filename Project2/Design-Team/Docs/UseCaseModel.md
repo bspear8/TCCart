@@ -34,7 +34,7 @@ __2.1.4.2 Alternates:__
 
 __2.2 Send Email__  
 __2.2.1 Requirements:__ Allows the system to send a VIP or credit notification email, in addition to the transaction receipt email.  
-__2.2.2 Pre-conditions:__ A transaction has been successfully completed.
+__2.2.2 Pre-conditions:__ A transaction has been successfully completed.  
 __2.2.3 Post-conditions:__ The customer will receive a notification email and reciept email at the email they originally provided to the manager.  
 __2.2.4 Scenarios:__  
 __2.2.4.1 Expected:__  
@@ -109,7 +109,7 @@ __2.5 List Transactions__
 __2.5.1 Requirements:__ Provides the manager with system output of that customer's transaction history.  
 __2.5.2 Pre-conditions:__ The customer must be in the system.  
 __2.5.3 Post-conditions:__ The results will display on the application.  
-__2.5.4 Scenarios:__
+__2.5.4 Scenarios:__  
 __2.5.4.1 Expected:__
 > 1. The manager selects a customer by either scanning the customer's card or pressing Customers and selecting a customer from that screen.
 2. On the customer screen, the manager selects "List Transactions."
@@ -120,6 +120,7 @@ __2.6.1 Requirements:__ Provides the manager with a way to print a customer card
 __2.6.2 Pre-conditions:__ The customer must have been added to the system.  
 __2.6.3 Post-conditions:__ The customer card will have been printed.  
 __2.6.4 Scenarios:__  
+__2.7.4.1 Expected:__  
 > 1. The manager selects a customer through the customers drop down.
 2. On the Customer screen, the manager presses the "Print Card" button.
 3. The application sends the customer's information and print request to the external printer library.
@@ -128,7 +129,7 @@ __2.7 _Scan Credit Card__
 __2.7.1 Requirements:__ The system will process the scanned credit card and charge the customer's account.  
 __2.7.2 Pre-conditions:__ Process transactions was initiated and a valid credit card is scanned.  
 __2.7.3 Post-conditions:__ The customer's credit account is charged and the credit information is not stored on the system.  
-__2.7.4 Scenarios:__ 
+__2.7.4 Scenarios:__  
 __2.7.4.1 Expected:__  
 > 1. The credit card is scanned and external credit card handling libraries process the transaction.
 2. Transaction success is returned to the application.
@@ -142,8 +143,8 @@ __2.8 Scan Customer Card__
 __2.8.1 Requirements:__ The system will process the customer card's QR code to look up the customer.  
 __2.8.2 Pre-conditions:__ The customer must have a customer card and have been added to the system previously.  
 __2.8.3 Post-conditions:__ The customer's information will be pulled up on the system.  
-__2.8.4 Scenarios:__
-__2.8.4.1 Expected:__
+__2.8.4 Scenarios:__  
+__2.8.4.1 Expected:__  
 > 1. The customer card is scanned and external QR code scanning libraries process the card.
 2. The customer's screen is displayed based on the returned ID.
 
