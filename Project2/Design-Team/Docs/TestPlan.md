@@ -12,11 +12,11 @@
 
 #### 1.1.1 Unit Tests
 
-Each class will have an associated unit test to verify methods associated with that class are implemented correctly. Unit tests will avoid testing methods or interfaces that are not exclusive to the unit under test. Unit tests shall be run by the Development Lead, the developers, and the QA Manager.
+Each class will have an associated unit test to verify methods associated with that class are implemented correctly. Unit tests will avoid testing methods or interfaces that are not exclusive to the unit under test. Unit tests shall be run by the Development Lead, Developers, and the QA Manager.
 
 #### 1.1.2 Integration Tests
 
-Integration tests will test the relationships between multiple classes and with external libraries. Integration Tests shall be run by the Development Lead, the developers, and the QA Manager.
+Integration tests will test the relationships between multiple classes and external libraries. Integration Tests shall be run by the Development Lead, Developers, and the QA Manager.
 
 #### 1.1.3 System Tests
 
@@ -26,23 +26,23 @@ System tests will be based on use cases described in the use-case model.  The sy
 
 ##### 1.1.3.2 Manual Tests
 
-Some system tests will be dependent on aspects which cannot be tested automatically, such as screen layout and visibility.  These tests will be run manually. During development, these tests may be run using an emulator, but to ensure proper funcitonality, they must be run on actual hardware prior to production. Manual Tests shall be run by the QA Manager and the Documentation Lead.
+Some system tests will be dependent on aspects which cannot be tested automatically, such as screen layout and visibility.  These tests will be run manually. During development, these tests may be run using an emulator.  However, to ensure proper functionality, they must be run on actual hardware prior to production deployment. Manual Tests shall be run by the QA Manager and the Documentation Lead.
 
 #### 1.1.4 Regression Tests
 
-Regression tests exist to ensure addition of new features do not break existing functionality, or to ensure refactored code still passes test cases.  Regression tests will consist of all previously written test cases for the unit, integration, and system tests. 
+Regression tests exist to ensure the addition of new features do not break existing functionality, or to ensure refactored code still passes test cases.  Regression tests will consist of all previously written test cases for the unit, integration, and system tests. 
 
 Changes to the system's application protocol interface (API) should be avoided wherever possible to preserve existing test cases.  In the event that the API must be changed, all existing test cases dependent on that API must be updated accordingly.
 
-The test suite will be built to run automatically, with the exception of some system tests run manually.  Prior to any commit to the master branch, the entire test suite must be run in its entirety and all tests must be in a passed state.  If functionality has changed to make a particular test case obsolete, the test case must be amended or removed prior to commitment to the master branch.  Changes to code which do not affect layout of screens or functionality of controls, do not require the manual tests to be rerun.  Manual tests do have to be rerun if changes are made to the user interface.
+The test suite will be built to run automatically, with the exception of some system tests that must be run manually.  Prior to any commit to the master branch, all of the test suite must be run in its entirety and all tests must be in a passed state.  If functionality has changed to make a particular test case obsolete, the test case must be amended or removed prior to commitment to the master branch.  Changes to code which do not affect layout of screens or functionality of controls, do not require the manual tests to be rerun.  Manual tests do have to be rerun if changes are made to the user interface.
 
-The owners of the previously run tests have the responsiblity to run each of his or her assigned tests.
+The owners of the previously run tests have the responsibility to run each of his or her assigned tests.
 
 ### 1.2 Test Selection
 
 #### 1.2.1 Unit Tests
 
-Unit Tests will utilize white-box techniques to ensure that the funtions in each class provide predicted output given a set of inputs.  Tests will involve inspection of return values of methods or checking the state of the instance of the class before and after a function.  
+Unit Tests will utilize white-box techniques to ensure that the functions in each class provide predicted output given a set of inputs.  Tests will involve inspection of return values of methods or checking the state of the instance of the class before and after a function.  
 
 #### 1.2.2 Interface Tests
 
@@ -60,7 +60,7 @@ Unit tests will test have both positive and negative versions of the same test. 
 
 #### 1.3.2 Integration Tests
 
-Testing will simulate input using stubs for external interfaces so as to avoid test dependency or inadvertently testing the external library. As hardware is beyond the scope of this software project, and requiring working hardware will increase cost of testing, all hardware interfaces will be simulated as well and and data provided from hardware will be simulated.
+Testing will simulate input using stubs for external interfaces so as to avoid test dependency or inadvertently testing the external library. As hardware is beyond the scope of this software project, and requiring working hardware will increase cost of testing, all hardware interfaces will be simulated as well and data provided from hardware will be simulated.
 
 #### 1.3.3 System Tests
 
