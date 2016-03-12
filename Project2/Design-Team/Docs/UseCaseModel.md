@@ -35,7 +35,7 @@ __2.1.4.2 Alternates:__
 __2.2 Send Email__  
 __2.2.1 Requirements:__ Allows the system to send a VIP or credit notification email, in addition to the transaction receipt email.  
 __2.2.2 Pre-conditions:__ A transaction has been successfully completed.  
-__2.2.3 Post-conditions:__ The customer will receive a notification email and reciept email at the email they originally provided to the manager.  
+__2.2.3 Post-conditions:__ The customer will receive a notification email and receipt email at the email they originally provided to the manager.  
 __2.2.4 Scenarios:__  
 __2.2.4.1 Expected:__  
 > 1. Upon completing a transaction, the system will format a message to send to the external email sending library.  
@@ -72,7 +72,7 @@ __2.3.4.2 Alternates:__
  6. The application returns the manager to the main menu page.  
 
 __2.4 Process Transactions__  
-__2.4.1 Requirements:__ Allows the manager to "close out" a customer's "cart" by charging their credit card minus any deductions and discounts, calculating credit earned and any VIP status earned, and then sending all applicable email notifiations and a receipt.  
+__2.4.1 Requirements:__ Allows the manager to "close out" a customer's "cart" by charging their credit card minus any deductions and discounts, calculating credit earned and any VIP status earned, and then sending all applicable email notifications and a receipt.  
 __2.4.2 Pre-conditions:__ The customer must have a valid customer card, credit card, and must have been added to the system previously.  
 __2.4.3 Post-conditions:__ The customer's card will have been charged and all credit/VIP calculations will have been made. The customer will receive credit/VIP notifications if applicable and a receipt email.  
 __2.4.4 Scenarios:__  
