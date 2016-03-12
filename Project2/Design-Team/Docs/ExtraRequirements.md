@@ -1,6 +1,6 @@
 # Supplemental Requirements
 
-**Author**:  Carol Stone (cstone41)
+**Author**:  Team38
 
 | Version | Description     |
 | --------|:---------------:|
