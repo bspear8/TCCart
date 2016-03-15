@@ -7,10 +7,18 @@ import java.util.List;
  */
 public interface Repository {
 
-    Customer getCustomerByID(String id);
+    List<Customer> getAllCustomers();
 
-    List<Transaction> getCustomerTransaction(String id);
+    Customer createCustomer(String name, String email);
 
-    
+    Customer updateCustomer(String id, String name, String email);
+
+    Customer getCustomerById(String customerId);
+
+    List<Transaction> getCustomerTransactions(String customerId);
+
+    List<Discount> getCustomerDiscounts(String customerId);
+
+    List<Discount> getTransactionDiscounts(String transactionId);
 
 }

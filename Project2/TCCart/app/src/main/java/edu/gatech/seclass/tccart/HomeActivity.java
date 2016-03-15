@@ -1,6 +1,7 @@
 package edu.gatech.seclass.tccart;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -20,8 +21,8 @@ public class HomeActivity extends AppCompatActivity {
 
         switch (view.getId()) {
             case R.id.scanCustomerCardButton:
-                toast = Toast.makeText(context, "Scanning Customer Card", Toast.LENGTH_SHORT);
-                toast.show();
+                Intent i = new Intent(HomeActivity.this, CustomerActivity.class);
+                startActivity(i);
                 break;
             case R.id.viewAllCustomersButton:
                 toast = Toast.makeText(context, "View all customers", Toast.LENGTH_SHORT);
