@@ -1,7 +1,9 @@
 package edu.gatech.seclass.tccart;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.TextView;
 
 public class CustomerActivity extends AppCompatActivity {
@@ -21,7 +23,19 @@ public class CustomerActivity extends AppCompatActivity {
         customerNameTextView = (TextView)findViewById(R.id.customerNameText);
         customerEmailTextView = (TextView)findViewById(R.id.customerEmailText);
 
-        customer = CartManager.getCustomerFromCard();
+
+        Intent intent = getIntent();
+        String customerId = intent.getStringExtra("customerId");
+
+        Log.v("CustomerActivity", String.format("customerId from intent: %s", customerId));
+
+        if (customerId == null) {
+            customer = CartManager.getCustomerFromCard();
+        } else {
+            customer = CartManager.getCustomerById(customerId);
+        }
+
+
 
         customerIdTextView.setText(customer.getId());
         customerNameTextView.setText(customer.getName());

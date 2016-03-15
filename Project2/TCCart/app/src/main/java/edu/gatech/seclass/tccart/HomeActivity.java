@@ -21,12 +21,12 @@ public class HomeActivity extends AppCompatActivity {
 
         switch (view.getId()) {
             case R.id.scanCustomerCardButton:
-                Intent i = new Intent(HomeActivity.this, CustomerActivity.class);
-                startActivity(i);
+                Intent customerIntent = new Intent(HomeActivity.this, CustomerActivity.class);
+                startActivity(customerIntent);
                 break;
             case R.id.viewAllCustomersButton:
-                toast = Toast.makeText(context, "View all customers", Toast.LENGTH_SHORT);
-                toast.show();
+                Intent customersIntent = new Intent(HomeActivity.this, CustomersActivity.class);
+                startActivity(customersIntent);
                 break;
         }
     }

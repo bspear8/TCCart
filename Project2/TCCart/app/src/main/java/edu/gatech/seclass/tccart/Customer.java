@@ -19,6 +19,11 @@ public class Customer {
         this.email = email;
     }
 
+    @Override
+    public String toString() {
+        return String.format("ID: %s Name: %s Email: %s", this.id, this.name, this.email);
+    }
+
     public String getId() {
         return this.id;
     }

@@ -1,5 +1,7 @@
 package edu.gatech.seclass.tccart;
 
+import java.util.List;
+
 import edu.gatech.seclass.services.QRCodeService;
 
 /**
@@ -8,6 +10,15 @@ import edu.gatech.seclass.services.QRCodeService;
 public class CartManager {
 
     public static final MemoryRepository repository = new MemoryRepository();
+
+
+    public static List<Customer> getAllCustomers() {
+        return repository.getAllCustomers();
+    }
+
+    public static Customer getCustomerById(String customerId) {
+        return repository.getCustomerById(customerId);
+    }
 
     public static Customer getCustomerFromCard() {
         String customerId = CartManager.scanQRCode();
