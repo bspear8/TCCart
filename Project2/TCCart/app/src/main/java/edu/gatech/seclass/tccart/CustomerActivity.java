@@ -35,11 +35,8 @@ public class CustomerActivity extends AppCompatActivity {
             customer = CartManager.getCustomerById(customerId);
         }
 
-
-
         customerIdTextView.setText(customer.getId());
         customerNameTextView.setText(customer.getName());
         customerEmailTextView.setText(customer.getEmail());
-
     }
 }

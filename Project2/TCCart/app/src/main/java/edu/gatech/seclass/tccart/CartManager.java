@@ -9,7 +9,7 @@ import edu.gatech.seclass.services.QRCodeService;
  */
 public class CartManager {
 
-    public static final MemoryRepository repository = new MemoryRepository();
+    public static final MemoryRepository repository = MemoryRepository.getInstance();
 
 
     public static List<Customer> getAllCustomers() {

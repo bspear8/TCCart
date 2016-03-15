@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
@@ -16,9 +17,6 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     public void onButtonClick(View view) {
-        Context context = getApplicationContext();
-        Toast toast;
-
         switch (view.getId()) {
             case R.id.scanCustomerCardButton:
                 Intent customerIntent = new Intent(HomeActivity.this, CustomerActivity.class);
@@ -27,6 +25,11 @@ public class HomeActivity extends AppCompatActivity {
             case R.id.viewAllCustomersButton:
                 Intent customersIntent = new Intent(HomeActivity.this, CustomersActivity.class);
                 startActivity(customersIntent);
+                break;
+            case R.id.addHomeCustomerButton:
+                Log.v("HomeActivity", "Add Customer Button Clicked...");
+                Intent addCustomerIntent = new Intent(HomeActivity.this, AddCustomerActivity.class);
+                startActivity(addCustomerIntent);
                 break;
         }
     }

@@ -16,7 +16,7 @@ public class CustomersActivity extends AppCompatActivity implements AdapterView.
 
 
     private ListView customersListView;
-    private ArrayList<Customer> customers;
+    private List<Customer> customers;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,19 +24,14 @@ public class CustomersActivity extends AppCompatActivity implements AdapterView.
         setContentView(R.layout.activity_customers);
         customersListView = (ListView)findViewById(R.id.customersListView);
         customers = (ArrayList)CartManager.getAllCustomers();
-
-        ArrayAdapter<Customer> arrayAdapter = new ArrayAdapter<Customer>(this, android.R.layout.simple_list_item_1, customers);
-
+        ArrayAdapter<Customer> arrayAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, customers);
         customersListView.setAdapter(arrayAdapter);
         customersListView.setOnItemClickListener(this);
-
-
     }
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         Intent customerIntent = new Intent(CustomersActivity.this, CustomerActivity.class);
-
         customerIntent.putExtra("customerId", this.customers.get(position).getId());
         startActivity(customerIntent);
     }

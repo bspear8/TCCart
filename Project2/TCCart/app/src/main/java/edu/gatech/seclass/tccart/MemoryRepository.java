@@ -10,6 +10,16 @@ public class MemoryRepository implements Repository {
 
     List<Customer> customers;
 
+
+    private static MemoryRepository instance = null;
+
+    public static MemoryRepository getInstance() {
+        if (instance == null) {
+            instance = new MemoryRepository();
+        }
+        return instance;
+    }
+
     private void seedCustomers() {
         this.customers = new ArrayList<Customer>();
 
@@ -25,7 +35,7 @@ public class MemoryRepository implements Repository {
         return "12345678";
     }
 
-    public MemoryRepository() {
+    private MemoryRepository() {
         seedCustomers();
     }
 
