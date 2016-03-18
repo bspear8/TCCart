@@ -1,5 +1,8 @@
 package edu.gatech.seclass.tccart;
 
+import java.math.BigDecimal;
+import java.util.List;
+
 /**
  * Created by ddersch on 3/15/16.
  */
@@ -9,6 +12,7 @@ public class Customer {
     private final String id;
     private String name;
     private String email;
+    private Repository repo;
 
     public static final Customer NotPresent = new Customer("","","");
 
@@ -17,6 +21,7 @@ public class Customer {
         this.id = id;
         this.name = name;
         this.email = email;
+        this.repo = MemoryRepository.getInstance();
     }
 
     @Override
@@ -44,5 +49,31 @@ public class Customer {
         this.email = email;
     }
 
+    public boolean hasCreditDiscount() {
+
+
+
+
+        return false;
+    }
+
+    public boolean hasActiveVipStatus() {
+        
+        return false;
+    }
+
+    public BigDecimal getCreditDiscount(BigDecimal amount) {
+        if (this.hasCreditDiscount()) {
+
+        }
+        return new BigDecimal("0.0");
+    }
+
+    public BigDecimal getVipDiscount(BigDecimal amount) {
+        if (this.hasActiveVipStatus()) {
+
+        }
+        return new BigDecimal("0.0");
+    }
 }
 

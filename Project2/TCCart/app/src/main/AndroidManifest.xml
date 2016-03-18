@@ -18,7 +18,8 @@
         <activity android:name=".CustomerActivity" />
         <activity android:name=".CustomersActivity" />
         <activity android:name=".AddCustomerActivity" />
-        <activity android:name=".EditCustomerActivity"></activity>
+        <activity android:name=".EditCustomerActivity" />
+        <activity android:name=".NewTransactionIntent"></activity>
     </application>
 
 </manifest>

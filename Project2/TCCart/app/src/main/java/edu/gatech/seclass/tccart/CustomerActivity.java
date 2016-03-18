@@ -24,7 +24,6 @@ public class CustomerActivity extends AppCompatActivity {
         customerNameTextView = (TextView)findViewById(R.id.customerNameText);
         customerEmailTextView = (TextView)findViewById(R.id.customerEmailText);
 
-
         Intent intent = getIntent();
         String customerId = intent.getStringExtra("customerId");
 
@@ -49,6 +48,11 @@ public class CustomerActivity extends AppCompatActivity {
                     Intent customerIntent = new Intent(CustomerActivity.this, EditCustomerActivity.class);
                     customerIntent.putExtra("customerId", customer.getId());
                     startActivity(customerIntent);
+                    break;
+                case R.id.startTransactionButton:
+                    Intent newTransactionIntent = new Intent(CustomerActivity.this, NewTransactionIntent.class);
+                    newTransactionIntent.putExtra("customerId", customer.getId());
+                    startActivity(newTransactionIntent);
                     break;
             }
     }
