@@ -9,7 +9,7 @@ import java.util.Random;
  */
 public class MemoryRepository implements Repository {
 
-    List<Customer> customers;
+    ArrayList<Customer> customers;
 
 
     private static MemoryRepository instance = null;
@@ -22,10 +22,10 @@ public class MemoryRepository implements Repository {
     }
 
     private void seedCustomers() {
-        this.customers = new ArrayList<>();
-        customers.add(new Customer("7c86ffee", "Ralph Hapschatt", "rh@gmail.com"));
-        customers.add(new Customer("b59441af", "Betty Monroe", "bm@gmail.com"));
-        customers.add(new Customer("cd0f0e05", "Everett Scott", "ec@gmail.com"));
+        this.customers = new ArrayList<Customer>();
+        //customers.add(new Customer("7c86ffee", "Ralph Hapschatt", "rh@gmail.com"));
+        //customers.add(new Customer("b59441af", "Betty Monroe", "bm@gmail.com"));
+        //customers.add(new Customer("cd0f0e05", "Everett Scott", "ec@gmail.com"));
     }
 
     static final String AB = "0123456789abcdef";
@@ -41,7 +41,7 @@ public class MemoryRepository implements Repository {
             }
         } while (!(this.getCustomerById(builder.toString()).equals(Customer.NotPresent)));
 
-
+        System.out.println(builder.toString());
         return builder.toString();
     }
 

@@ -99,5 +99,36 @@
                 android:id="@+id/updateCustomerButton"
                 android:onClick="onButtonClick" />
         </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Remove"
+            android:id="@+id/removeCustomerButton"
+            android:layout_gravity="center_horizontal"
+            android:onClick="onButtonClick" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cancel"
+                android:id="@+id/cancelUpdateCustomer"
+                android:onClick="onButtonClick" />
+        </LinearLayout>
     </LinearLayout>
+
 </RelativeLayout>

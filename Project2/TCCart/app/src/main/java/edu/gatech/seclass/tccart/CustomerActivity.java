@@ -40,7 +40,6 @@ public class CustomerActivity extends AppCompatActivity {
         customerEmailTextView.setText(customer.getEmail());
     }
 
-
     public void onButtonClick(View view) {
 
             switch (view.getId()) {
@@ -55,5 +54,10 @@ public class CustomerActivity extends AppCompatActivity {
                     startActivity(newTransactionIntent);
                     break;
             }
+    }
+
+    public void onBackPressed() {
+        Intent homeIntent = new Intent(this, HomeActivity.class);
+        startActivity(homeIntent);
     }
 }

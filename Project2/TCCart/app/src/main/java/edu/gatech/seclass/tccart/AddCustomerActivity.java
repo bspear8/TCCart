@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class AddCustomerActivity extends AppCompatActivity {
 
@@ -22,7 +23,6 @@ public class AddCustomerActivity extends AppCompatActivity {
         nameText = (TextView)findViewById(R.id.addCustomerNameText);
         emailText = (TextView)findViewById(R.id.addCustomerEmailText);
 
-
     }
 
     public void onCustomerButtonClick(View view) {
@@ -31,14 +31,29 @@ public class AddCustomerActivity extends AppCompatActivity {
                 String tag = "AddCustomerActivity";
 
                 MemoryRepository repo = MemoryRepository.getInstance();
+                if(nameText.getText().toString().equals("")){
+                    Toast.makeText(getApplicationContext(), "Name Cannot Be Blank", Toast.LENGTH_SHORT).show();
+                    break;
+                }
+                if(emailText.getText().toString().equals("")){
+                    Toast.makeText(getApplicationContext(), "Email Cannot Be Blank", Toast.LENGTH_SHORT).show();
+                    break;
+                }
                 Log.v(tag, "Name Text: " + nameText.getText().toString());
                 Log.v(tag, "Email Text: " + emailText.getText().toString());
 
                 Customer customer = repo.createCustomer(nameText.getText().toString(), emailText.getText().toString());
 
+                Toast.makeText(getApplicationContext(), "Customer Added", Toast.LENGTH_SHORT).show();
+
                 Intent customerIntent = new Intent(AddCustomerActivity.this, CustomerActivity.class);
                 customerIntent.putExtra("customerId", customer.getId());
                 startActivity(customerIntent);
+                break;
+            case R.id.cancelAddCustomer:
+                Intent homeIntent = new Intent(AddCustomerActivity.this, HomeActivity.class);
+                Toast.makeText(getApplicationContext(), "Cancelled", Toast.LENGTH_SHORT).show();
+                startActivity(homeIntent);
                 break;
         }
     }
