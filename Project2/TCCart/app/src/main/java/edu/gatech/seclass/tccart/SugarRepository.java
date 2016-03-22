@@ -92,6 +92,12 @@ public class SugarRepository implements Repository {
     }
 
     @Override
+    public void removeCustomer(String customerId){
+        Customer toRemove = getCustomerById(customerId);
+        toRemove.delete();
+    }
+
+    @Override
     public List<Transaction> getCustomerTransactions(String customerId) {
         return null;
     }

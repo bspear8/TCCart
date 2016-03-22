@@ -78,7 +78,10 @@ public class EditCustomerActivity extends AppCompatActivity {
                     public void onClick(DialogInterface dialog, int which) {
                         switch (which){
                             case DialogInterface.BUTTON_POSITIVE:
-
+                                SugarRepository.getInstance().removeCustomer(customer.getCustomerId());
+                                Intent homeIntent = new Intent(EditCustomerActivity.this, HomeActivity.class);
+                                Toast.makeText(getApplicationContext(), "Customer Removed", Toast.LENGTH_SHORT).show();
+                                startActivity(homeIntent);
                                 break;
 
                             case DialogInterface.BUTTON_NEGATIVE:
