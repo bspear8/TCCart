@@ -1,36 +1,29 @@
 package edu.gatech.seclass.tccart;
 
-import java.math.BigDecimal;
+import com.orm.SugarRecord;
+
 import java.util.List;
 
 /**
- * Created by ddersch on 3/15/16.
+ * Created by ddersch on 3/18/16.
  */
-public class Customer {
 
 
-    private final String id;
-    private String name;
-    private String email;
-    private Repository repo;
+
+public class Customer extends SugarRecord{
 
     public static final Customer NotPresent = new Customer("","","");
 
-    public Customer(String id, String name, String email)
-    {
-        this.id = id;
-        this.name = name;
-        this.email = email;
-        this.repo = MemoryRepository.getInstance();
+    String customerId;
+    String name;
+    String email;
+
+    public Customer() {
+
     }
 
-    @Override
-    public String toString() {
-        return String.format("ID: %s Name: %s Email: %s", this.id, this.name, this.email);
-    }
-
-    public String getId() {
-        return this.id;
+    public String getCustomerId() {
+        return this.customerId;
     }
 
     public String getName() {
@@ -49,31 +42,22 @@ public class Customer {
         this.email = email;
     }
 
-    public boolean hasCreditDiscount() {
-
-
-
-
-        return false;
+    @Override
+    public String toString() {
+        return String.format("ID: %s Name: %s Email: %s", this.customerId, this.name, this.email);
     }
 
-    public boolean hasActiveVipStatus() {
-        
-        return false;
+    public Customer(String customerId, String name, String email) {
+        this.customerId = customerId;
+        this.name = name;
+        this.email = email;
     }
 
-    public BigDecimal getCreditDiscount(BigDecimal amount) {
-        if (this.hasCreditDiscount()) {
-
-        }
-        return new BigDecimal("0.0");
+    List<TransactionRecord> getTransactions() {
+        return TransactionRecord.find(TransactionRecord.class, "customer = ?", getId().toString());
     }
 
-    public BigDecimal getVipDiscount(BigDecimal amount) {
-        if (this.hasActiveVipStatus()) {
 
-        }
-        return new BigDecimal("0.0");
-    }
+
+
 }
-

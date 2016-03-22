@@ -5,7 +5,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -30,7 +29,6 @@ public class AddCustomerActivity extends AppCompatActivity {
             case R.id.addCustomerButton:
                 String tag = "AddCustomerActivity";
 
-                MemoryRepository repo = MemoryRepository.getInstance();
                 if(nameText.getText().toString().equals("")){
                     Toast.makeText(getApplicationContext(), "Name Cannot Be Blank", Toast.LENGTH_SHORT).show();
                     break;
@@ -39,6 +37,7 @@ public class AddCustomerActivity extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), "Email Cannot Be Blank", Toast.LENGTH_SHORT).show();
                     break;
                 }
+                SugarRepository repo = SugarRepository.getInstance();
                 Log.v(tag, "Name Text: " + nameText.getText().toString());
                 Log.v(tag, "Email Text: " + emailText.getText().toString());
 
@@ -47,7 +46,7 @@ public class AddCustomerActivity extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "Customer Added", Toast.LENGTH_SHORT).show();
 
                 Intent customerIntent = new Intent(AddCustomerActivity.this, CustomerActivity.class);
-                customerIntent.putExtra("customerId", customer.getId());
+                customerIntent.putExtra("customerId", customer.getCustomerId());
                 startActivity(customerIntent);
                 break;
             case R.id.cancelAddCustomer:
