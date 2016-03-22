@@ -9,8 +9,6 @@ import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
-
 import java.math.BigDecimal;
 
 public class NewTransactionIntent extends AppCompatActivity {
@@ -47,14 +45,14 @@ public class NewTransactionIntent extends AppCompatActivity {
             newTransactionTotalText.setText("");
         }
 
-
-        if (customer.hasCreditDiscount()) {
-
-        }
-
-        if (customer.hasActiveVipStatus()) {
-
-        }
+//
+//        if (customer.hasCreditDiscount()) {
+//
+//        }
+//
+//        if (customer.hasActiveVipStatus()) {
+//
+//        }
 //
 //        newTransactionAmountText.setText(amount.toString());
 //
@@ -72,12 +70,12 @@ public class NewTransactionIntent extends AppCompatActivity {
         setContentView(R.layout.activity_new_transaction_intent);
 
         Intent intent = getIntent();
-        String customerId = intent.getStringExtra("customerId");
+        String customerId = intent.getStringExtra("customerIdentifier");
 
-        customer = MemoryRepository.getInstance().getCustomerById(customerId);
+        customer = SugarRepository.getInstance().getCustomerById(customerId);
         transaction = new Transaction();
 
-        Log.v("CustomerActivity", String.format("customerId from intent: %s", customerId));
+        Log.v("CustomerActivity", String.format("customerIdentifier from intent: %s", customerId));
 
         newTransactionCreditDiscountText = (TextView)findViewById(R.id.newTransactionCreditDiscountText);
         newTransactionVipDiscountText = (TextView)findViewById(R.id.newTransactionVipDiscountText);

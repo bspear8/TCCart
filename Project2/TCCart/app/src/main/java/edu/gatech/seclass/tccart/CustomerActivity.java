@@ -35,7 +35,7 @@ public class CustomerActivity extends AppCompatActivity {
             customer = CartManager.getCustomerById(customerId);
         }
 
-        customerIdTextView.setText(customer.getId());
+        customerIdTextView.setText(customer.getCustomerId());
         customerNameTextView.setText(customer.getName());
         customerEmailTextView.setText(customer.getEmail());
     }
@@ -46,12 +46,12 @@ public class CustomerActivity extends AppCompatActivity {
             switch (view.getId()) {
                 case R.id.editCustomerButton:
                     Intent customerIntent = new Intent(CustomerActivity.this, EditCustomerActivity.class);
-                    customerIntent.putExtra("customerId", customer.getId());
+                    customerIntent.putExtra("customerId", customer.getCustomerId());
                     startActivity(customerIntent);
                     break;
                 case R.id.startTransactionButton:
                     Intent newTransactionIntent = new Intent(CustomerActivity.this, NewTransactionIntent.class);
-                    newTransactionIntent.putExtra("customerId", customer.getId());
+                    newTransactionIntent.putExtra("customerId", customer.getCustomerId());
                     startActivity(newTransactionIntent);
                     break;
             }

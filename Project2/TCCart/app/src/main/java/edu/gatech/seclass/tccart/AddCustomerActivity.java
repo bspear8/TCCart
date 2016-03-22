@@ -5,7 +5,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.EditText;
 import android.widget.TextView;
 
 public class AddCustomerActivity extends AppCompatActivity {
@@ -30,14 +29,14 @@ public class AddCustomerActivity extends AppCompatActivity {
             case R.id.addCustomerButton:
                 String tag = "AddCustomerActivity";
 
-                MemoryRepository repo = MemoryRepository.getInstance();
+                SugarRepository repo = SugarRepository.getInstance();
                 Log.v(tag, "Name Text: " + nameText.getText().toString());
                 Log.v(tag, "Email Text: " + emailText.getText().toString());
 
                 Customer customer = repo.createCustomer(nameText.getText().toString(), emailText.getText().toString());
 
                 Intent customerIntent = new Intent(AddCustomerActivity.this, CustomerActivity.class);
-                customerIntent.putExtra("customerId", customer.getId());
+                customerIntent.putExtra("customerId", customer.getCustomerId());
                 startActivity(customerIntent);
                 break;
         }

@@ -29,11 +29,11 @@ public class EditCustomerActivity extends AppCompatActivity {
         Intent intent = getIntent();
         String customerId = intent.getStringExtra("customerId");
 
-        Log.v("CustomerActivity", String.format("customerId from intent: %s", customerId));
+        Log.v("CustomerActivity", String.format("customerIdentifier from intent: %s", customerId));
 
         customer = CartManager.getCustomerById(customerId);
 
-        editCustomerIdText.setText(customer.getId());
+        editCustomerIdText.setText(customer.getCustomerId());
         editCustomerNameText.setText(customer.getName());
         editCustomerEmailText.setText(customer.getEmail());
 
@@ -44,13 +44,13 @@ public class EditCustomerActivity extends AppCompatActivity {
         switch (view.getId()) {
             case R.id.updateCustomerButton:
 
-                customer = MemoryRepository.getInstance().updateCustomer(
-                        customer.getId(),
+                customer = SugarRepository.getInstance().updateCustomer(
+                        customer.getCustomerId(),
                         editCustomerNameText.getText().toString(),
                         editCustomerEmailText.getText().toString());
 
                 Intent intent = new Intent(EditCustomerActivity.this, CustomerActivity.class);
-                intent.putExtra("customerId", customer.getId());
+                intent.putExtra("customerId", customer.getCustomerId());
                 startActivity(intent);
                 break;
         }
