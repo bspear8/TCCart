@@ -11,6 +11,8 @@ public class CreditDiscount implements Discount {
     private Date expirationDate;
     private BigDecimal amountRemaining;
 
+    public BigDecimal getAmountRemaining() { return this.amountRemaining; }
+
     public CreditDiscount(Date expirationDate) {
         this.amountRemaining = new BigDecimal("3.00");
         this.expirationDate = expirationDate;
