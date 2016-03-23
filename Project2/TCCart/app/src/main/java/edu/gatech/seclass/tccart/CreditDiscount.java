@@ -13,7 +13,10 @@ public class CreditDiscount  extends SugarRecord implements Discount {
     private Date expirationDate;
     private BigDecimal amountRemaining;
 
+
     private Customer customer;
+
+    public BigDecimal getAmountRemaining() { return this.amountRemaining; }
 
     public CreditDiscount(Date expirationDate) {
         this.amountRemaining = new BigDecimal("3.00");
