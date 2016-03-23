@@ -1,19 +1,27 @@
 package edu.gatech.seclass.tccart;
 
+import com.orm.SugarRecord;
+
 import java.math.BigDecimal;
 import java.util.Date;
 
 /**
  * Created by ddersch on 3/15/16.
  */
-public class CreditDiscount implements Discount {
+public class CreditDiscount  extends SugarRecord implements Discount {
 
     private Date expirationDate;
     private BigDecimal amountRemaining;
 
+    private Customer customer;
+
     public CreditDiscount(Date expirationDate) {
         this.amountRemaining = new BigDecimal("3.00");
         this.expirationDate = expirationDate;
+    }
+
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
     }
 
     @Override

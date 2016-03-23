@@ -11,10 +11,10 @@ import android.widget.TextView;
 
 import java.math.BigDecimal;
 
-public class NewTransactionIntent extends AppCompatActivity {
+public class NewTransactionActivity extends AppCompatActivity {
 
     private Customer customer;
-    private Transaction transaction;
+    private CartTransaction transaction;
 
     private TextView newTransactionCustomerIdText;
     private TextView newTransactionAmountText;
@@ -67,13 +67,13 @@ public class NewTransactionIntent extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_new_transaction_intent);
+        setContentView(R.layout.activity_new_transaction);
 
         Intent intent = getIntent();
-        String customerId = intent.getStringExtra("customerIdentifier");
+        String customerId = intent.getStringExtra("customerId");
 
         customer = SugarRepository.getInstance().getCustomerById(customerId);
-        transaction = new Transaction();
+        transaction = new CartTransaction();
 
         Log.v("CustomerActivity", String.format("customerIdentifier from intent: %s", customerId));
 
@@ -108,7 +108,18 @@ public class NewTransactionIntent extends AppCompatActivity {
     public void onButtonClick(View view) {
         switch (view.getId()) {
             case R.id.processPaymentButton:
+                transaction.setAmount(new BigDecimal(newTransactionTotalText.getText().toString()));
+                transaction.setCustomer(customer);
+                transaction.setCreditDiscount(new BigDecimal("0"));
+                transaction.setVipDiscount(new BigDecimal("0"));
 
+                long id = transaction.save();
+
+
+                Intent intent = new Intent(NewTransactionActivity.this, TransactionConfirmationActivity.class);
+                intent.putExtra("customerId", customer.getCustomerId());
+                intent.putExtra("transactionId", transaction.getId());
+                startActivity(intent);
 
 
                 break;

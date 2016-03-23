@@ -1,6 +1,7 @@
 package edu.gatech.seclass.tccart;
 
 import com.orm.SugarRecord;
+import com.orm.dsl.Unique;
 
 import java.util.List;
 
@@ -14,12 +15,19 @@ public class Customer extends SugarRecord{
 
     public static final Customer NotPresent = new Customer("","","");
 
+    @Unique
     String customerId;
     String name;
     String email;
 
     public Customer() {
 
+    }
+
+    public Customer(String customerId, String name, String email) {
+        this.customerId = customerId;
+        this.name = name;
+        this.email = email;
     }
 
     public String getCustomerId() {
@@ -47,14 +55,13 @@ public class Customer extends SugarRecord{
         return String.format("ID: %s Name: %s Email: %s", this.customerId, this.name, this.email);
     }
 
-    public Customer(String customerId, String name, String email) {
-        this.customerId = customerId;
-        this.name = name;
-        this.email = email;
+
+    List<CartTransaction> getTransactions() {
+        return CartTransaction.find(CartTransaction.class, "customer = ?", getId().toString());
     }
 
-    List<TransactionRecord> getTransactions() {
-        return TransactionRecord.find(TransactionRecord.class, "customer = ?", getId().toString());
+    public void getVipDiscounts() {
+
     }
 
 

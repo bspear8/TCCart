@@ -98,7 +98,7 @@ public class SugarRepository implements Repository {
     }
 
     @Override
-    public List<Transaction> getCustomerTransactions(String customerId) {
+    public List<CartTransaction> getCustomerTransactions(String customerId) {
         return null;
     }
 
