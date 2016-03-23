@@ -19,10 +19,20 @@ public class SugarRepository implements Repository {
     }
 
     private void seedCustomers() {
+        Customer ralph = this.getCustomerById("7c86ffee");
+        if (ralph == Customer.NotPresent) {
+            new Customer("7c86ffee", "Ralph Hapschatt", "rh@gmail.com").save();
+        }
 
-        new Customer("7c86ffee", "Ralph Hapschatt", "rh@gmail.com").save();
-        new Customer("b59441af", "Betty Monroe", "bm@gmail.com").save();
-        new Customer("cd0f0e05", "Everett Scott", "ec@gmail.com").save();
+        Customer betty = this.getCustomerById("b59441af");
+        if (betty == Customer.NotPresent) {
+            new Customer("b59441af", "Betty Monroe", "bm@gmail.com").save();
+        }
+
+        Customer everett = this.getCustomerById("cd0f0e05");
+        if (everett == Customer.NotPresent) {
+            new Customer("cd0f0e05", "Everett Scott", "ec@gmail.com").save();
+        }
 
 
     }

@@ -58,6 +58,11 @@ public class CartTransaction extends SugarRecord {
         this.vipDiscount = vipDiscount;
     }
 
+    @Override
+    public String toString() {
+        return this.date.toString() + " $" + amountBeforeDiscounts.toString();
+    }
+
 
 
 

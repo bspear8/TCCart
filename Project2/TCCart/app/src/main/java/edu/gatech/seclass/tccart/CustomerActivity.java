@@ -53,6 +53,11 @@ public class CustomerActivity extends AppCompatActivity {
                     newTransactionIntent.putExtra("customerId", customer.getCustomerId());
                     startActivity(newTransactionIntent);
                     break;
+                case R.id.customerTransactionsButton:
+                    Intent customerTransactionsIntent = new Intent(CustomerActivity.this, CustomerTransactionsActivity.class);
+                    customerTransactionsIntent.putExtra("customerId", customer.getCustomerId());
+                    startActivity(customerTransactionsIntent);
+                    break;
             }
     }
 
