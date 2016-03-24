@@ -1,5 +1,6 @@
 package edu.gatech.seclass.tccart;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 import edu.gatech.seclass.services.QRCodeService;
@@ -18,6 +19,37 @@ public class CartManager {
 
     public static Customer getCustomerById(String customerId) {
         return repository.getCustomerById(customerId);
+    }
+
+
+    public static ComputationResult computeTotal(Customer customer, BigDecimal amount) {
+
+        BigDecimal originalAmount = amount;
+
+        BigDecimal creditDiscountAmount = new BigDecimal("0.00");
+        BigDecimal vipDiscountAmount = new BigDecimal("0.00");
+
+
+
+        VIPDiscount vipDiscount = customer.getActiveVIP();
+
+        if (vipDiscount != VIPDiscount.NoVIPStatus) {
+            vipDiscountAmount = vipDiscount.computeSavings(originalAmount);
+        }
+
+        BigDecimal amountAfterVIPDiscount = originalAmount.subtract(vipDiscountAmount);
+
+        CreditDiscount creditDiscount = customer.getActiveCredit();
+
+        if (creditDiscount != CreditDiscount.NoCreditDiscount) {
+            creditDiscountAmount = creditDiscount.computeSavings(amountAfterVIPDiscount);
+        }
+
+        BigDecimal amountAfterCreditDiscount = amountAfterVIPDiscount.subtract(creditDiscountAmount);
+
+        return new ComputationResult(originalAmount, vipDiscountAmount, creditDiscountAmount, amountAfterCreditDiscount);
+
+
     }
 
     public static Customer getCustomerFromCard() {

@@ -3,6 +3,7 @@ package edu.gatech.seclass.tccart;
 import com.orm.SugarRecord;
 import com.orm.dsl.Unique;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -56,15 +57,45 @@ public class Customer extends SugarRecord{
     }
 
 
-    List<CartTransaction> getTransactions() {
-        return CartTransaction.find(CartTransaction.class, "customer = ?", getId().toString());
+    public List<CartTransaction> getTransactions() {
+        return CartTransaction.find(CartTransaction.class, "customer = ?", this.getId().toString());
     }
 
-    public void getVipDiscounts() {
+    public List<CreditDiscount> getAllCredits() {
+        return CreditDiscount.find(CreditDiscount.class, "customer = ?", this.getId().toString());
+    }
+
+    public CreditDiscount getActiveCredit() {
+        List<CreditDiscount> credits = this.getAllCredits();
+
+
+        for (CreditDiscount credit : credits) {
+            if (credit.isExpired()) {
+                credit.delete();
+            } else {
+                return credit;
+            }
+        }
+        return CreditDiscount.NoCreditDiscount;
 
     }
 
+    public List<VIPDiscount> getAllVIPDiscounts() {
+        return VIPDiscount.find(VIPDiscount.class, "customer = ?", this.getId().toString());
+    }
 
 
+    public VIPDiscount getActiveVIP() {
+        List<VIPDiscount> discounts = this.getAllVIPDiscounts();
 
+
+        for (VIPDiscount vip : discounts) {
+            if (vip.isExpired()) {
+                vip.delete();
+            } else if (vip.isCurrent()) {
+                return vip;
+            }
+        }
+        return VIPDiscount.NoVIPStatus;
+    }
 }

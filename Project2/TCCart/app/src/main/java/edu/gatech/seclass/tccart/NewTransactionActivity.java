@@ -24,8 +24,9 @@ public class NewTransactionActivity extends AppCompatActivity {
 
     private void updateFields() {
         BigDecimal amount = new BigDecimal("0.00");
-        BigDecimal creditDiscount = new BigDecimal("0.00");
+        BigDecimal creditDiscountAmount = new BigDecimal("0.00");
         BigDecimal vipDiscount = new BigDecimal("0.00");
+        BigDecimal finalAmount = new BigDecimal("0.00");
 
         String textAmount = newTransactionAmountText.getText().toString();
         Log.v("Text Amount: ", textAmount);
@@ -33,34 +34,26 @@ public class NewTransactionActivity extends AppCompatActivity {
         if (!textAmount.equals("")) {
             try {
                 amount = new BigDecimal(textAmount);
-                Log.v("Tag", amount.toString());
+                ComputationResult result = CartManager.computeTotal(customer, amount);
+
+                creditDiscountAmount = result.getCreditDiscountAmount();
+                vipDiscount = result.getVipDiscountAmount();
+                finalAmount = result.getFinalAmount();
+
+
             } catch (Exception e) {
                 return;
             }
         } else {
             newTransactionVipDiscountText.setText("");
-
             newTransactionCreditDiscountText.setText("");
-
             newTransactionTotalText.setText("");
         }
 
-//
-//        if (customer.hasCreditDiscount()) {
-//
-//        }
-//
-//        if (customer.hasActiveVipStatus()) {
-//
-//        }
-//
-//        newTransactionAmountText.setText(amount.toString());
-//
+
         newTransactionVipDiscountText.setText(vipDiscount.toString());
-//
-        newTransactionCreditDiscountText.setText(creditDiscount.toString());
-//
-        newTransactionTotalText.setText(amount.subtract(creditDiscount).subtract(vipDiscount).toString());
+        newTransactionCreditDiscountText.setText(creditDiscountAmount.toString());
+        newTransactionTotalText.setText(finalAmount.toString());
 
     }
 
@@ -108,6 +101,7 @@ public class NewTransactionActivity extends AppCompatActivity {
     public void onButtonClick(View view) {
         switch (view.getId()) {
             case R.id.processPaymentButton:
+
                 transaction.setAmount(new BigDecimal(newTransactionTotalText.getText().toString()));
                 transaction.setCustomer(customer);
                 transaction.setCreditDiscount(new BigDecimal("0"));

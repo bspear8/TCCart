@@ -54,6 +54,13 @@ public class CartTransaction extends SugarRecord {
         this.creditDiscount = creditDiscount;
     }
 
+    public BigDecimal calculateFinalAmount() {
+        BigDecimal baseAmount = this.amountBeforeDiscounts;
+
+        return baseAmount.subtract(creditDiscount).subtract(vipDiscount);
+
+    }
+
     public void setVipDiscount(BigDecimal vipDiscount) {
         this.vipDiscount = vipDiscount;
     }

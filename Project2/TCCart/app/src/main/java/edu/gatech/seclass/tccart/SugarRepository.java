@@ -1,6 +1,9 @@
 package edu.gatech.seclass.tccart;
 
+import android.util.Log;
+
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 import java.util.Random;
 
@@ -23,6 +26,16 @@ public class SugarRepository implements Repository {
         if (ralph == Customer.NotPresent) {
             new Customer("7c86ffee", "Ralph Hapschatt", "rh@gmail.com").save();
         }
+
+        Calendar cal = Calendar.getInstance();
+        cal.add(Calendar.MONTH, 1);
+        CreditDiscount discount = new CreditDiscount(cal.getTime());
+        discount.setCustomer(ralph);
+        long id = discount.save();
+
+
+
+        Log.v("TAG", "discount id: " + id);
 
         Customer betty = this.getCustomerById("b59441af");
         if (betty == Customer.NotPresent) {

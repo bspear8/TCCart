@@ -24,7 +24,7 @@
 
         <meta-data
             android:name="DATABASE"
-            android:value="cart_database4.db" />
+            android:value="cart_database5.db" />
         <meta-data
             android:name="VERSION"
             android:value="2" />
