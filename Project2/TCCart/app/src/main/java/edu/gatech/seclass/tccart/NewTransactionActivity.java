@@ -8,6 +8,7 @@ import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.math.BigDecimal;
 
@@ -15,6 +16,7 @@ public class NewTransactionActivity extends AppCompatActivity {
 
     private Customer customer;
     private CartTransaction transaction;
+    private CreditDiscount discount;
 
     private TextView newTransactionCustomerIdText;
     private TextView newTransactionAmountText;
@@ -68,6 +70,8 @@ public class NewTransactionActivity extends AppCompatActivity {
         customer = SugarRepository.getInstance().getCustomerById(customerId);
         transaction = new CartTransaction();
 
+        discount = customer.getActiveCredit();
+
         Log.v("CustomerActivity", String.format("customerIdentifier from intent: %s", customerId));
 
         newTransactionCreditDiscountText = (TextView)findViewById(R.id.newTransactionCreditDiscountText);
@@ -102,13 +106,22 @@ public class NewTransactionActivity extends AppCompatActivity {
         switch (view.getId()) {
             case R.id.processPaymentButton:
 
-                transaction.setAmount(new BigDecimal(newTransactionTotalText.getText().toString()));
-                transaction.setCustomer(customer);
-                transaction.setCreditDiscount(new BigDecimal("0"));
-                transaction.setVipDiscount(new BigDecimal("0"));
+                BigDecimal amount = new BigDecimal("0.0");
+                try {
+                    amount = new BigDecimal(newTransactionAmountText.getText().toString());
+                } catch (Exception e) {
+                    Toast toast = Toast.makeText(getApplicationContext(), "Error reading dollar amount. Please try again.", Toast.LENGTH_SHORT);
+                    toast.show();
+                    return;
+                }
 
-                long id = transaction.save();
-
+                try {
+                    CartManager.processTransaction(customer, transaction, amount, discount);
+                } catch (ReadCreditCardException e) {
+                    Toast toast = Toast.makeText(getApplicationContext(), "Error reading credit card. Please try again.", Toast.LENGTH_SHORT);
+                    toast.show();
+                    return;
+                }
 
                 Intent intent = new Intent(NewTransactionActivity.this, TransactionConfirmationActivity.class);
                 intent.putExtra("customerId", customer.getCustomerId());

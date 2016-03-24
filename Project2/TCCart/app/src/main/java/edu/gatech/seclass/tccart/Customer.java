@@ -3,6 +3,7 @@ package edu.gatech.seclass.tccart;
 import com.orm.SugarRecord;
 import com.orm.dsl.Unique;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -70,7 +71,7 @@ public class Customer extends SugarRecord{
 
 
         for (CreditDiscount credit : credits) {
-            if (credit.isExpired()) {
+            if (credit.isExpired() || credit.getAmountRemaining().equals(new BigDecimal("0.0"))) {
                 credit.delete();
             } else {
                 return credit;
