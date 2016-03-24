@@ -34,6 +34,13 @@ public class SugarRepository implements Repository {
         long id = discount.save();
 
 
+        VIPDiscount vip = new VIPDiscount(Calendar.getInstance().getTime());
+
+        vip.setCustomer(ralph);
+        vip.save();
+
+
+
 
         Log.v("TAG", "discount id: " + id);
 

@@ -35,7 +35,7 @@ public class VIPDiscount extends SugarRecord implements Discount {
 
     @Override
     public BigDecimal computeSavings(BigDecimal amount) {
-        return amount.subtract(amount.multiply(this.discountPercentage));
+        return amount.multiply(this.discountPercentage);
     }
 
     public boolean isExpired() {
