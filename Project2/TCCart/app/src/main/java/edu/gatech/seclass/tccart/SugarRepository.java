@@ -1,6 +1,9 @@
 package edu.gatech.seclass.tccart;
 
+import android.util.Log;
+
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 import java.util.Random;
 
@@ -19,10 +22,37 @@ public class SugarRepository implements Repository {
     }
 
     private void seedCustomers() {
+        Customer ralph = this.getCustomerById("7c86ffee");
+        if (ralph == Customer.NotPresent) {
+            new Customer("7c86ffee", "Ralph Hapschatt", "rh@gmail.com").save();
+        }
 
-        new Customer("7c86ffee", "Ralph Hapschatt", "rh@gmail.com").save();
-        new Customer("b59441af", "Betty Monroe", "bm@gmail.com").save();
-        new Customer("cd0f0e05", "Everett Scott", "ec@gmail.com").save();
+        Calendar cal = Calendar.getInstance();
+        cal.add(Calendar.MONTH, 1);
+        CreditDiscount discount = new CreditDiscount(cal.getTime());
+        discount.setCustomer(ralph);
+        long id = discount.save();
+
+
+        VIPDiscount vip = new VIPDiscount(Calendar.getInstance().getTime());
+
+        vip.setCustomer(ralph);
+        vip.save();
+
+
+
+
+        Log.v("TAG", "discount id: " + id);
+
+        Customer betty = this.getCustomerById("b59441af");
+        if (betty == Customer.NotPresent) {
+            new Customer("b59441af", "Betty Monroe", "bm@gmail.com").save();
+        }
+
+        Customer everett = this.getCustomerById("cd0f0e05");
+        if (everett == Customer.NotPresent) {
+            new Customer("cd0f0e05", "Everett Scott", "ec@gmail.com").save();
+        }
 
 
     }
@@ -98,7 +128,7 @@ public class SugarRepository implements Repository {
     }
 
     @Override
-    public List<Transaction> getCustomerTransactions(String customerId) {
+    public List<CartTransaction> getCustomerTransactions(String customerId) {
         return null;
     }
 

@@ -7,13 +7,12 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="edu.gatech.seclass.tccart.CustomerActivity">
+    tools:context="edu.gatech.seclass.tccart.TransactionConfirmationActivity">
 
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:onClick="onButtonClick">
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:orientation="horizontal"
@@ -24,28 +23,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Customer"
-                android:id="@+id/textView5" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <TextView
-                android:layout_width="135dp"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="ID:"
-                android:id="@+id/textView2" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:id="@+id/customerIdText"
-                android:text="&lt;customer id>" />
+                android:text="Confirmation"
+                android:id="@+id/textView16" />
 
         </LinearLayout>
 
@@ -57,36 +36,97 @@
             <TextView
                 android:layout_width="135dp"
                 android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Name:"
-                android:id="@+id/textView3" />
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Customer:"
+                android:id="@+id/textView21" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="&lt;customer name>"
-                android:id="@+id/customerNameText" />
+                android:text="&lt;customer id>"
+                android:id="@+id/transactionConfirmationCustomerIdText" />
+
         </LinearLayout>
 
         <LinearLayout
             android:orientation="horizontal"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <TextView
                 android:layout_width="135dp"
                 android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Email:"
-                android:id="@+id/textView4" />
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Date:"
+                android:id="@+id/textView29" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="&lt;customer email>"
-                android:id="@+id/customerEmailText" />
+                android:text="&lt;date>"
+                android:id="@+id/transactionConfirmationDateText" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="135dp"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="VIP Discount:"
+                android:id="@+id/textView23" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="&lt;vip discount amount>"
+                android:id="@+id/transactionConfirmationVipDiscountText" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="135dp"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Credit Discount:"
+                android:id="@+id/textView25" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="&lt;credit discount>"
+                android:id="@+id/transactionConfirmationCreditDiscountText" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="135dp"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Final Amount:"
+                android:id="@+id/textView27" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="&lt;final amount>"
+                android:id="@+id/transactionConfirmationFinalAmountText" />
         </LinearLayout>
 
         <LinearLayout
@@ -97,39 +137,10 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Edit"
-                android:id="@+id/editCustomerButton"
-                android:layout_weight="1"
+                android:text="Home"
+                android:id="@+id/transactionConfirmationHomeButton"
                 android:onClick="onButtonClick" />
         </LinearLayout>
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Start Transaction"
-                android:id="@+id/startTransactionButton"
-                android:onClick="onButtonClick" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Transactions"
-                android:id="@+id/customerTransactionsButton"
-                android:layout_weight="1"
-                android:onClick="onButtonClick" />
-        </LinearLayout>
-
     </LinearLayout>
 
 </RelativeLayout>

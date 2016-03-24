@@ -24,4 +24,6 @@
 
 2.3 A database server will not available for permanent storage when developing and testing the TCCart application.  Arrays, internal databases, and other coding substitution will be used to make up for the lack of a remote storage device for use.
 
-2.4  The testing platform will be restricted to Android Studio and the Java Runtime 7.0 Environment and standard libraries, except as noted in 1.1 above.
+2.4 The testing platform will be restricted to Android Studio and the Java Runtime 7.0 Environment and standard libraries, except as noted in 1.1 above.  
+
+2.5 The application will provide a method for the manager to list all customers so the manager can edit customer information without scanning a customer card.

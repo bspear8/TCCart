@@ -17,7 +17,7 @@ public interface Repository {
 
     void removeCustomer(String customerId);
 
-    List<Transaction> getCustomerTransactions(String customerId);
+    List<CartTransaction> getCustomerTransactions(String customerId);
 
     List<Discount> getCustomerDiscounts(String customerId);
 
